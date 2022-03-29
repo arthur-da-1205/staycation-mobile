@@ -6,6 +6,7 @@ const Button = ({
   image,
   labelBtn,
   borderBtn = 0,
+  borderColor,
   onPress,
   btnColor = 'blue',
   btnHeight = 9,
@@ -14,7 +15,8 @@ const Button = ({
 }) => {
   return (
     <TouchableOpacity
-      style={styles.btnContainer(btnColor, btnHeight, borderBtn)}
+      activeOpacity={0.8}
+      style={styles.btnContainer(btnColor, btnHeight, borderBtn, borderColor)}
       onPress={onPress}>
       <Image source={image} />
       <View style={styles.textContainer}>
@@ -37,8 +39,9 @@ Button.propTypes = {
 };
 
 const styles = StyleSheet.create({
-  btnContainer: (btnColor, btnHeight, borderBtn) => ({
+  btnContainer: (btnColor, btnHeight, borderBtn, borderColor) => ({
     backgroundColor: btnColor,
+    borderColor: borderColor,
     alignItems: 'center',
     paddingVertical: btnHeight,
     paddingHorizontal: 9,
