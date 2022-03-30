@@ -1,9 +1,14 @@
 import {View, Text} from 'react-native';
 import React from 'react';
-import {ForgotPassword, SpalshScreen} from './screens';
+import {ForgotPassword, SignIn, SpalshScreen} from './screens';
 
 const App = () => {
-  return <SpalshScreen />;
+  return (
+    <>
+      {/* <SpalshScreen />; */}
+      <SignIn />
+    </>
+  );
 };
 
 export default App;
