@@ -1,5 +1,5 @@
 import ForgotPassword from './ForgotPassword';
 import SpalshScreen from './SplashScreen';
-import SignIn from './SignIn';
+import StartScreen from './StartScreen';
 
-export {ForgotPassword, SpalshScreen, SignIn};
+export {ForgotPassword, SpalshScreen, StartScreen};
