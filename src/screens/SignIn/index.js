@@ -5,28 +5,30 @@ import {COLORS} from '../../constants';
 
 const SignIn = () => {
   return (
-    <ScrollView contentContainerStyle={{flexGrow: 1}} style={styles.page}>
-      <Text style={styles.headerTitle}>Log in</Text>
-      <View style={styles.container}>
-        <InputField label="Email Address" placeholder="Type your email" />
-        <Space height={20} />
-        <InputField label="Email Address" placeholder="Type your email" />
-        <Space height={16} />
-        <Text style={styles.text1}>Forgot password?</Text>
-        <Space height={24} />
-        <Button labelBtn="Sign In" />
-        <Space height={58} />
-        <Text style={styles.text2}>Don’t have an account?</Text>
-        <Space height={20} />
-        <Button
-          labelBtn="Sign Up"
-          borderColor={COLORS.primary2}
-          btnColor={COLORS.white}
-          textColor={COLORS.primary2}
-          borderBtn={1.5}
-        />
-      </View>
-    </ScrollView>
+    <View style={styles.page}>
+      <Text style={styles.headerTitle}>Login</Text>
+      <ScrollView contentContainerStyle={{flexGrow: 1}}>
+        <View style={styles.container}>
+          <InputField label="Email Address" placeholder="Type your email" />
+          <Space height={20} />
+          <InputField label="Password" placeholder="Type your password" />
+          <Space height={16} />
+          <Text style={styles.text1}>Forgot password?</Text>
+          <Space height={24} />
+          <Button labelBtn="Sign In" />
+          <Space height={58} />
+          <Text style={styles.text2}>Don’t have an account?</Text>
+          <Space height={20} />
+          <Button
+            labelBtn="Sign Up"
+            borderColor={COLORS.primary2}
+            btnColor={COLORS.white}
+            textColor={COLORS.primary2}
+            borderBtn={1.5}
+          />
+        </View>
+      </ScrollView>
+    </View>
   );
 };
 
