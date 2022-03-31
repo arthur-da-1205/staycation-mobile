@@ -6,10 +6,11 @@ import {
   StartScreen,
   SignIn,
   SignUp,
+  WelcomeScreenOne,
 } from './screens';
 
 const App = () => {
-  return <SignUp />;
+  return <WelcomeScreenOne />;
 };
 
 export default App;
