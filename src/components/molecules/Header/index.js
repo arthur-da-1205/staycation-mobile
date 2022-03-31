@@ -3,6 +3,7 @@ import React from 'react';
 import {COLORS} from '../../../constants';
 import {Space} from '../../atom';
 import {OnBack, EditProfile} from '../../../assets/Icon';
+import PropTypes from 'prop-types';
 
 const Header = ({title, type, noStepper}) => {
   const renderContent = () => {
@@ -116,3 +117,9 @@ const styles = StyleSheet.create({
     color: COLORS.primary2,
   },
 });
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  noStepper: PropTypes.string,
+};
