@@ -1,12 +1,12 @@
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
-import {Button, InputField, Space} from '../../components';
+import {Button, Header, InputField, Space} from '../../components';
 import {COLORS} from '../../constants';
 
 const SignIn = () => {
   return (
     <View style={styles.page}>
-      <Text style={styles.headerTitle}>Login</Text>
+      <Header title={'Login'} />
       <ScrollView contentContainerStyle={{flexGrow: 1}}>
         <View style={styles.container}>
           <InputField label="Email Address" placeholder="Type your email" />
@@ -36,13 +36,6 @@ export default SignIn;
 
 const styles = StyleSheet.create({
   page: {flex: 1, backgroundColor: COLORS.white},
-  headerTitle: {
-    fontFamily: 'Poppins-Bold',
-    fontSize: 28,
-    color: COLORS.primary2,
-    textAlign: 'center',
-    marginTop: 36,
-  },
   container: {
     flex: 1,
     paddingHorizontal: 24,
