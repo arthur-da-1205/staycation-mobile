@@ -7,15 +7,15 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React from 'react';
-import {COLORS} from '../../constants';
-import {Header, Space} from '../../components';
+import {COLORS} from '../../../constants';
+import {Header, Space} from '../../../components';
 import {
   CarouselOne,
   OnNext,
   WelcomeImg1,
   WelcomeImg2,
   WelcomeImg3,
-} from '../../assets';
+} from '../../../assets';
 
 const WelcomeScreenOne = () => {
   return (
