@@ -7,6 +7,7 @@ import {
   SignIn,
   SignUp,
   WelcomeScreenOne,
+  WelcomeScreenTwo,
 } from './screens';
 
 const App = () => {
