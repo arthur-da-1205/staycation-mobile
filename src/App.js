@@ -11,7 +11,7 @@ import {
 } from './screens';
 
 const App = () => {
-  return <WelcomeScreenTwo />;
+  return <WelcomeScreenOne />;
 };
 
 export default App;
