@@ -8,6 +8,10 @@ import {
   WelcomeScreenTwo,
   WelcomeScreenThree,
 } from './WelcomeScreen';
+import Home from './Home';
+import Trips from './Trips';
+import Saved from './Saved';
+import Profile from './Profile';
 
 export {
   ForgotPassword,
@@ -18,4 +22,8 @@ export {
   WelcomeScreenOne,
   WelcomeScreenTwo,
   WelcomeScreenThree,
+  Home,
+  Trips,
+  Saved,
+  Profile,
 };
