@@ -3,7 +3,11 @@ import SpalshScreen from './SplashScreen';
 import StartScreen from './StartScreen';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
-import {WelcomeScreenOne, WelcomeScreenTwo} from './WelcomeScreen';
+import {
+  WelcomeScreenOne,
+  WelcomeScreenTwo,
+  WelcomeScreenThree,
+} from './WelcomeScreen';
 
 export {
   ForgotPassword,
@@ -13,4 +17,5 @@ export {
   SignUp,
   WelcomeScreenOne,
   WelcomeScreenTwo,
+  WelcomeScreenThree,
 };
