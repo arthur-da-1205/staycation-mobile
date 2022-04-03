@@ -1,5 +1,7 @@
 import {View, Text} from 'react-native';
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+
 import {
   ForgotPassword,
   SpalshScreen,
@@ -8,10 +10,20 @@ import {
   SignUp,
   WelcomeScreenOne,
   WelcomeScreenTwo,
+  WelcomeScreenThree,
 } from './screens';
+import Router from './router';
+
+const MainApp = () => {
+  return (
+    <NavigationContainer>
+      <Router />
+    </NavigationContainer>
+  );
+};
 
 const App = () => {
-  return <WelcomeScreenOne />;
+  return <MainApp />;
 };
 
 export default App;
