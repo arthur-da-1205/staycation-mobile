@@ -16,13 +16,14 @@ import {
   WelcomeScreenThree,
   WelcomeScreenTwo,
 } from '../screens';
+import {BottomNavigator} from '../components';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const MainApp = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator tabBar={props => <BottomNavigator {...props} />}>
       <Tab.Screen
         name="Explore"
         component={HomeScreen}
