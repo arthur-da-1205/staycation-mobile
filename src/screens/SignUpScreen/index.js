@@ -3,7 +3,7 @@ import React from 'react';
 import {Button, Header, InputField, Space} from '../../components';
 import {COLORS} from '../../constants';
 
-const SignUp = () => {
+const SignUpScreen = () => {
   return (
     <View style={styles.page}>
       <Header title={'Create account'} />
@@ -36,7 +36,7 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUpScreen;
 
 const styles = StyleSheet.create({
   page: {flex: 1, backgroundColor: COLORS.white},

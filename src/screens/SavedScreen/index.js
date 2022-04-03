@@ -1,14 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const Trips = () => {
+const SavedScreen = () => {
   return (
     <View>
-      <Text>Trips</Text>
+      <Text>SavedScreen</Text>
     </View>
   );
 };
 
-export default Trips;
+export default SavedScreen;
 
 const styles = StyleSheet.create({});

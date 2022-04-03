@@ -3,7 +3,7 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Button, InputField} from '../../components';
 
-const ForgotPassword = () => {
+const ForgotPasswordScreen = () => {
   return (
     <View style={styles.pageContainer}>
       <View style={styles.header}>
@@ -31,7 +31,7 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword;
+export default ForgotPasswordScreen;
 
 const styles = StyleSheet.create({
   pageContainer: {

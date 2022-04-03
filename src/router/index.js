@@ -4,14 +4,14 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
   ForgotPassword,
-  Home,
-  Profile,
-  Saved,
-  SignIn,
-  SignUp,
+  HomeScreen,
+  ProfileScreen,
+  SavedScreen,
+  SignInScreen,
+  SignUpScreen,
   SpalshScreen,
   StartScreen,
-  Trips,
+  TripsScreen,
   WelcomeScreenOne,
   WelcomeScreenThree,
   WelcomeScreenTwo,
@@ -25,22 +25,22 @@ const MainApp = () => {
     <Tab.Navigator>
       <Tab.Screen
         name="Explore"
-        component={Home}
+        component={HomeScreen}
         options={{headerShown: false}}
       />
       <Tab.Screen
         name="Trips"
-        component={Trips}
+        component={TripsScreen}
         options={{headerShown: false}}
       />
       <Tab.Screen
         name="Saved"
-        component={Saved}
+        component={SavedScreen}
         options={{headerShown: false}}
       />
       <Tab.Screen
         name="Profile"
-        component={Profile}
+        component={ProfileScreen}
         options={{headerShown: false}}
       />
     </Tab.Navigator>

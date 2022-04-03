@@ -1,29 +1,29 @@
-import ForgotPassword from './ForgotPassword';
+import ForgotPasswordScreen from './ForgotPasswordScreen';
 import SpalshScreen from './SplashScreen';
 import StartScreen from './StartScreen';
-import SignIn from './SignIn';
-import SignUp from './SignUp';
+import SignInScreen from './SignInScreen';
+import SignUpScreen from './SignUpScreen';
 import {
   WelcomeScreenOne,
   WelcomeScreenTwo,
   WelcomeScreenThree,
 } from './WelcomeScreen';
-import Home from './Home';
-import Trips from './Trips';
-import Saved from './Saved';
-import Profile from './Profile';
+import HomeScreen from './HomeScreen';
+import TripsScreen from './TripsScreen';
+import SavedScreen from './SavedScreen';
+import ProfileScreen from './ProfileScreen';
 
 export {
-  ForgotPassword,
+  ForgotPasswordScreen,
   SpalshScreen,
   StartScreen,
-  SignIn,
-  SignUp,
+  SignInScreen,
+  SignUpScreen,
   WelcomeScreenOne,
   WelcomeScreenTwo,
   WelcomeScreenThree,
-  Home,
-  Trips,
-  Saved,
-  Profile,
+  HomeScreen,
+  TripsScreen,
+  SavedScreen,
+  ProfileScreen,
 };

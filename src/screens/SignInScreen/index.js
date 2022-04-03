@@ -3,7 +3,7 @@ import React from 'react';
 import {Button, Header, InputField, Space} from '../../components';
 import {COLORS} from '../../constants';
 
-const SignIn = () => {
+const SignInScreen = () => {
   return (
     <View style={styles.page}>
       <Header title={'Login'} />
@@ -32,7 +32,7 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignInScreen;
 
 const styles = StyleSheet.create({
   page: {flex: 1, backgroundColor: COLORS.white},
