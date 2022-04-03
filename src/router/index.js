@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
   ForgotPassword,
+  ForgotPasswordScreen,
   HomeScreen,
   ProfileScreen,
   SavedScreen,
@@ -51,7 +52,7 @@ const MainApp = () => {
 const Router = () => {
   return (
     <Stack.Navigator>
-      {/* <Stack.Screen
+      <Stack.Screen
         name="SplashScreen"
         component={SpalshScreen}
         options={{headerShown: false}}
@@ -63,17 +64,17 @@ const Router = () => {
       />
       <Stack.Screen
         name="SignInScreen"
-        component={SignIn}
+        component={SignInScreen}
         options={{headerShown: false}}
       />
       <Stack.Screen
         name="SignUpScreen"
-        component={SignUp}
+        component={SignUpScreen}
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="ForgotPassword"
-        component={ForgotPassword}
+        name="ForgotPasswordScreen"
+        component={ForgotPasswordScreen}
         options={{headerShown: false}}
       />
       <Stack.Screen
@@ -90,7 +91,7 @@ const Router = () => {
         name="WelcomeScreenThree"
         component={WelcomeScreenThree}
         options={{headerShown: false}}
-      /> */}
+      />
       <Stack.Screen
         name="MainApp"
         component={MainApp}

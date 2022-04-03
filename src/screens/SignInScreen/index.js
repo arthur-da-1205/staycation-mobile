@@ -1,9 +1,15 @@
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import {Button, Header, InputField, Space} from '../../components';
 import {COLORS} from '../../constants';
 
-const SignInScreen = () => {
+const SignInScreen = ({navigation}) => {
   return (
     <View style={styles.page}>
       <Header title={'Login'} />
@@ -13,9 +19,17 @@ const SignInScreen = () => {
           <Space height={20} />
           <InputField label="Password" placeholder="Type your password" />
           <Space height={16} />
-          <Text style={styles.text1}>Forgot password?</Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('ForgotPasswordScreen');
+            }}>
+            <Text style={styles.text1}>Forgot Password?</Text>
+          </TouchableOpacity>
           <Space height={24} />
-          <Button labelBtn="Sign In" />
+          <Button
+            labelBtn="Sign In"
+            onPress={() => navigation.navigate('MainApp')}
+          />
           <Space height={58} />
           <Text style={styles.text2}>Don’t have an account?</Text>
           <Space height={20} />
@@ -25,6 +39,7 @@ const SignInScreen = () => {
             btnColor={COLORS.white}
             textColor={COLORS.primary2}
             borderBtn={1.5}
+            onPress={() => navigation.navigate('SignUpScreen')}
           />
         </View>
       </ScrollView>
