@@ -1,14 +1,239 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
+import {COLORS} from '../../constants';
+import {Space, VacationCard} from '../../components';
+import {
+  DummyWS1,
+  IcApartment,
+  IcCities,
+  IcHotel,
+  IcHouse,
+  IcTraveler,
+  IcTreasure,
+} from '../../assets';
 
 const HomeScreen = () => {
+  const renderDataStatistic = ({icon, total, title}) => {
+    return (
+      <View style={{alignItems: 'center'}}>
+        {icon}
+        <Space height={4} />
+        <Text
+          style={{
+            fontFamily: 'Poppins-Bold',
+            color: COLORS.primary2,
+            fontSize: 12,
+          }}>
+          {total}
+        </Text>
+        <Text
+          style={{
+            fontFamily: 'Poppins-Regular',
+            color: COLORS.primary2,
+            fontSize: 12,
+            marginTop: -6,
+          }}>
+          {title}
+        </Text>
+      </View>
+    );
+  };
+
+  const renderMenuCategories = ({icon, title}) => {
+    return (
+      <View style={{alignItems: 'center'}}>
+        <View
+          style={{
+            borderColor: COLORS.gray,
+            borderWidth: 1.5,
+            borderRadius: 8,
+            width: 72,
+            paddingVertical: 8,
+            alignItems: 'center',
+            marginBottom: 8,
+          }}>
+          {icon}
+        </View>
+        <Text
+          style={{
+            fontFamily: 'Poppins-Medium',
+            color: COLORS.primary2,
+            fontSize: 12,
+          }}>
+          {title}
+        </Text>
+      </View>
+    );
+  };
+
+  const renderContentBar = ({title}) => {
+    return (
+      <View
+        style={{
+          backgroundColor: COLORS.primary,
+          width: 195,
+          borderTopRightRadius: 8,
+          borderBottomRightRadius: 8,
+          paddingLeft: 24,
+          paddingVertical: 6,
+          marginBottom: 20,
+        }}>
+        <Text
+          style={{
+            fontFamily: 'Poppins-Medium',
+            color: COLORS.white,
+            fontSize: 16,
+          }}>
+          {title}
+        </Text>
+      </View>
+    );
+  };
+
   return (
-    <View>
-      <Text>HomeScreen</Text>
+    <View style={styles.page}>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          marginTop: 16,
+          marginHorizontal: 24,
+        }}>
+        <View style={{flex: 1.2}}>
+          <Text
+            style={{
+              fontFamily: 'Poppins-Medium',
+              color: COLORS.primary,
+              fontSize: 22,
+            }}>
+            Stay
+            <Text style={{color: COLORS.primary2}}>cation.</Text>
+          </Text>
+          <Text style={{fontFamily: 'Poppins-Regular', color: COLORS.gray}}>
+            Let’s find best place
+          </Text>
+        </View>
+        <View
+          style={{
+            backgroundColor: COLORS.lightGray,
+            flex: 1,
+            borderTopLeftRadius: 24,
+            borderBottomLeftRadius: 8,
+            alignItems: 'flex-end',
+            justifyContent: 'center',
+            paddingRight: 8,
+          }}>
+          <Text
+            style={{
+              fontFamily: 'Poppins-Regular',
+              color: COLORS.primary2,
+              fontSize: 12,
+            }}>
+            Welcome
+          </Text>
+          <Text
+            style={{
+              fontFamily: 'Poppins-Medium',
+              color: COLORS.primary2,
+              fontSize: 18,
+            }}>
+            John Doe
+          </Text>
+        </View>
+      </View>
+
+      <Space height={24} />
+
+      <View
+        style={{
+          marginHorizontal: 60,
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+        }}>
+        {renderDataStatistic({
+          icon: <IcTraveler />,
+          total: '80.409',
+          title: 'travelers',
+        })}
+
+        {renderDataStatistic({
+          icon: <IcTreasure />,
+          total: '862',
+          title: 'treasure',
+        })}
+
+        {renderDataStatistic({
+          icon: <IcCities />,
+          total: '1.492',
+          title: 'cities',
+        })}
+      </View>
+
+      <Space height={24} />
+
+      {renderContentBar({title: 'Categories'})}
+
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          marginHorizontal: 24,
+        }}>
+        {renderMenuCategories({icon: <IcHotel />, title: 'Hotel'})}
+        {renderMenuCategories({icon: <IcApartment />, title: 'Apartment'})}
+        {renderMenuCategories({icon: <IcHouse />, title: 'House'})}
+      </View>
+
+      <View
+        style={{
+          backgroundColor: COLORS.gray,
+          height: 1.5,
+          marginHorizontal: 24,
+          marginTop: 16,
+        }}
+      />
+
+      <Space height={20} />
+
+      {renderContentBar({title: 'Most Picked'})}
+
+      <ScrollView style={{marginHorizontal: 24}}>
+        <VacationCard
+          dummyImg={DummyWS1}
+          price="1.200.500"
+          titleName="Red Line"
+          type="big-card"
+          bigImgType
+          subtitle="Gorosei and Ternyubito"
+        />
+
+        <VacationCard
+          dummyImg={DummyWS1}
+          price="1.200.500"
+          titleName="Red Line"
+          type="big-card"
+          bigImgType
+          subtitle="Gorosei and Ternyubito"
+        />
+
+        <VacationCard
+          dummyImg={DummyWS1}
+          price="1.200.500"
+          titleName="Red Line"
+          type="big-card"
+          bigImgType
+          subtitle="Gorosei and Ternyubito"
+        />
+      </ScrollView>
     </View>
   );
 };
 
 export default HomeScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    backgroundColor: COLORS.white,
+  },
+});

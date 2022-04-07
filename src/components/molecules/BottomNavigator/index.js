@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
   containerInActive: {alignItems: 'center'},
   textInActive: {color: COLORS.primary2},
   bottomTabContainer: {
-    backgroundColor: 'white',
+    backgroundColor: COLORS.lightGray,
     flexDirection: 'row',
     paddingTop: 15,
     paddingBottom: 13,
