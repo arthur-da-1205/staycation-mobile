@@ -1,17 +1,16 @@
 import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
-import Header from '../Header';
-import {Button, Space} from '../../atom';
+import {Button} from '../../atom';
 import {COLORS, DIMENSIONS} from '../../../constants';
-import {DummyHotelScreen, IcStar} from '../../../assets';
+import {IcStar} from '../../../assets';
 
-const CategoriesCard = () => {
+const CategoriesCard = ({dummyImg, title}) => {
   return (
     <View style={styles.container}>
-      <Image source={DummyHotelScreen} style={styles.image} />
+      <Image source={dummyImg} style={styles.image} />
 
       <View style={styles.containerRight}>
-        <Text style={styles.title}>Green Park</Text>
+        <Text style={styles.title}>{title}</Text>
         <Text style={styles.subTitle}>Bogor, Indonesia</Text>
         <View style={styles.containerRating}>
           <IcStar />

@@ -13,6 +13,7 @@ import TripsScreen from './TripsScreen';
 import SavedScreen from './SavedScreen';
 import ProfileScreen from './ProfileScreen';
 import HotelScreen from './HotelScreen';
+import ApartmentScreen from './ApartmentScreen';
 
 export {
   ForgotPasswordScreen,
@@ -28,4 +29,5 @@ export {
   SavedScreen,
   ProfileScreen,
   HotelScreen,
+  ApartmentScreen,
 };
