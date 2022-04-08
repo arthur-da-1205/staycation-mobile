@@ -3,6 +3,10 @@ import React from 'react';
 import {COLORS} from '../../constants';
 import {Space, VacationCard} from '../../components';
 import {
+  DummyHomeScreen1,
+  DummyHomeScreen2,
+  DummyHomeScreen3,
+  DummyHomeScreen4,
   DummyWS1,
   IcApartment,
   IcCities,
@@ -200,7 +204,7 @@ const HomeScreen = () => {
 
         <View style={{marginHorizontal: 24}}>
           <VacationCard
-            dummyImg={DummyWS1}
+            dummyImg={DummyHomeScreen1}
             price="1.200.500"
             titleName="Red Line"
             type="big-card"
@@ -209,7 +213,7 @@ const HomeScreen = () => {
           />
 
           <VacationCard
-            dummyImg={DummyWS1}
+            dummyImg={DummyHomeScreen2}
             price="1.200.500"
             titleName="Red Line"
             type="big-card"
@@ -218,7 +222,16 @@ const HomeScreen = () => {
           />
 
           <VacationCard
-            dummyImg={DummyWS1}
+            dummyImg={DummyHomeScreen3}
+            price="1.200.500"
+            titleName="Red Line"
+            type="big-card"
+            bigImgType
+            subtitle="Gorosei and Ternyubito"
+          />
+
+          <VacationCard
+            dummyImg={DummyHomeScreen4}
             price="1.200.500"
             titleName="Red Line"
             type="big-card"

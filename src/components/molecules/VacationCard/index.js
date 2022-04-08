@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, ImageBackground} from 'react-native';
+import {StyleSheet, Text, View, ImageBackground, Image} from 'react-native';
 import React from 'react';
 import {COLORS, DIMENSIONS} from '../../../constants';
 import PropTypes from 'prop-types';
@@ -17,7 +17,10 @@ const VacationCard = ({
       case 'big-card':
         return (
           <>
-            <ImageBackground source={dummyImg} style={styles.bigImg}>
+            <ImageBackground
+              source={dummyImg}
+              style={styles.bigImg}
+              imageStyle={{borderRadius: 15}}>
               <View style={styles.containerFrame}>
                 <View style={styles.frame}>
                   <Text style={styles.textPrice}>{price} IDR</Text>
@@ -35,6 +38,7 @@ const VacationCard = ({
                 )}
               </View>
             </ImageBackground>
+
             <Space height={16} />
           </>
         );
@@ -42,7 +46,10 @@ const VacationCard = ({
       case 'small-card':
         return (
           <>
-            <ImageBackground source={dummyImg} style={styles.smallImg}>
+            <ImageBackground
+              source={dummyImg}
+              style={styles.smallImg}
+              imageStyle={{borderRadius: 15}}>
               <View style={styles.containerFrame}>
                 <View style={styles.frame}>
                   <Text style={styles.textPrice}>{price} IDR</Text>
@@ -61,6 +68,7 @@ const VacationCard = ({
         return <Text>Anda Belum Menentukan Type dari Card</Text>;
     }
   };
+
   return <View>{renderCard()}</View>;
 };
 
@@ -100,8 +108,8 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Medium',
   },
   bigImg: {
-    height: (DIMENSIONS.widthScreen - 48) / 2.08,
-    aspectRatio: 2.08 / 1,
+    height: (DIMENSIONS.widthScreen - 48) / 2,
+    aspectRatio: 2 / 1,
   },
   smallImg: {
     height: (DIMENSIONS.widthScreen - 48 - 12) / 2,
