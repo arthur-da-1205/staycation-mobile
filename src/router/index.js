@@ -5,6 +5,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
   ForgotPassword,
   HomeScreen,
+  HotelScreen,
   ProfileScreen,
   SavedScreen,
   SignInScreen,
@@ -92,19 +93,21 @@ const Router = () => {
         component={WelcomeScreenThree}
         options={{headerShown: false}}
       />
+      
       <Stack.Screen
-        name="MainApp"
-        component={MainApp}
+        name="HotelScreen"
+        component={HotelScreen}
         options={{
-          headerShown: false,
-          contentStyle: {backgroundColor: COLORS.white},
+          headerShown: false
         }}
-      /> */}
+      />
+
+       */}
 
       {/* Screen yang di jalankan */}
       <Stack.Screen
-        name="MainApp"
-        component={MainApp}
+        name="HotelScreen"
+        component={HotelScreen}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
