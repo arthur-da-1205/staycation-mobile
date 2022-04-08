@@ -171,59 +171,61 @@ const HomeScreen = () => {
 
       <Space height={24} />
 
-      {renderContentBar({title: 'Categories'})}
+      <ScrollView>
+        {renderContentBar({title: 'Categories'})}
 
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          marginHorizontal: 24,
-        }}>
-        {renderMenuCategories({icon: <IcHotel />, title: 'Hotel'})}
-        {renderMenuCategories({icon: <IcApartment />, title: 'Apartment'})}
-        {renderMenuCategories({icon: <IcHouse />, title: 'House'})}
-      </View>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginHorizontal: 24,
+          }}>
+          {renderMenuCategories({icon: <IcHotel />, title: 'Hotel'})}
+          {renderMenuCategories({icon: <IcApartment />, title: 'Apartment'})}
+          {renderMenuCategories({icon: <IcHouse />, title: 'House'})}
+        </View>
 
-      <View
-        style={{
-          backgroundColor: COLORS.gray,
-          height: 1.5,
-          marginHorizontal: 24,
-          marginTop: 16,
-        }}
-      />
-
-      <Space height={20} />
-
-      {renderContentBar({title: 'Most Picked'})}
-
-      <ScrollView style={{marginHorizontal: 24}}>
-        <VacationCard
-          dummyImg={DummyWS1}
-          price="1.200.500"
-          titleName="Red Line"
-          type="big-card"
-          bigImgType
-          subtitle="Gorosei and Ternyubito"
+        <View
+          style={{
+            backgroundColor: COLORS.gray,
+            height: 1.5,
+            marginHorizontal: 24,
+            marginTop: 16,
+          }}
         />
 
-        <VacationCard
-          dummyImg={DummyWS1}
-          price="1.200.500"
-          titleName="Red Line"
-          type="big-card"
-          bigImgType
-          subtitle="Gorosei and Ternyubito"
-        />
+        <Space height={20} />
 
-        <VacationCard
-          dummyImg={DummyWS1}
-          price="1.200.500"
-          titleName="Red Line"
-          type="big-card"
-          bigImgType
-          subtitle="Gorosei and Ternyubito"
-        />
+        {renderContentBar({title: 'Most Picked'})}
+
+        <View style={{marginHorizontal: 24}}>
+          <VacationCard
+            dummyImg={DummyWS1}
+            price="1.200.500"
+            titleName="Red Line"
+            type="big-card"
+            bigImgType
+            subtitle="Gorosei and Ternyubito"
+          />
+
+          <VacationCard
+            dummyImg={DummyWS1}
+            price="1.200.500"
+            titleName="Red Line"
+            type="big-card"
+            bigImgType
+            subtitle="Gorosei and Ternyubito"
+          />
+
+          <VacationCard
+            dummyImg={DummyWS1}
+            price="1.200.500"
+            titleName="Red Line"
+            type="big-card"
+            bigImgType
+            subtitle="Gorosei and Ternyubito"
+          />
+        </View>
       </ScrollView>
     </View>
   );
