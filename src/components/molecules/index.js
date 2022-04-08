@@ -1,3 +1,5 @@
 import Header from './Header';
 import BottomNavigator from './BottomNavigator';
-export {Header, BottomNavigator};
+import VacationCard from './VacationCard';
+
+export {Header, BottomNavigator, VacationCard};

@@ -18,6 +18,7 @@ import {
   WelcomeScreenTwo,
 } from '../screens';
 import {BottomNavigator} from '../components';
+import {COLORS} from '../constants';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -92,6 +93,19 @@ const Router = () => {
         component={WelcomeScreenThree}
         options={{headerShown: false}}
       />
+<<<<<<< HEAD
+=======
+      <Stack.Screen
+        name="MainApp"
+        component={MainApp}
+        options={{
+          headerShown: false,
+          contentStyle: {backgroundColor: COLORS.white},
+        }}
+      /> */}
+
+      {/* Screen yang di jalankan */}
+>>>>>>> 8774c287f79eaf931c09b5459a26bd5c6bc7f68e
       <Stack.Screen
         name="MainApp"
         component={MainApp}
