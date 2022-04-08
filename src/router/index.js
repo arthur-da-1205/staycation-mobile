@@ -7,6 +7,7 @@ import {
   ForgotPassword,
   HomeScreen,
   HotelScreen,
+  HouseScreen,
   ProfileScreen,
   SavedScreen,
   SignInScreen,
@@ -111,12 +112,20 @@ const Router = () => {
         }}
       />
 
+      <Stack.Screen
+        name="HouseScreen"
+        component={HouseScreen}
+        options={{
+          headerShown: false
+        }}
+      />
+
        */}
 
       {/* Screen yang di jalankan */}
       <Stack.Screen
-        name="HotelScreen"
-        component={HotelScreen}
+        name="HouseScreen"
+        component={HouseScreen}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
