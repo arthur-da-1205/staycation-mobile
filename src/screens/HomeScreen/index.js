@@ -17,86 +17,36 @@ import {
 } from '../../assets';
 import {categories} from '../../data/Category';
 import CategoriesSection from './components/CategoriesSection';
+import {statistic} from '../../data/Statistic';
+import DataSection from './components/DataSection';
+
+const TitleSectionBar = ({title}) => {
+  return (
+    <View
+      style={{
+        backgroundColor: COLORS.primary,
+        width: 195,
+        borderTopRightRadius: 8,
+        borderBottomRightRadius: 8,
+        paddingLeft: 24,
+        paddingVertical: 6,
+        marginBottom: 20,
+      }}>
+      <Text
+        style={{
+          fontFamily: 'Poppins-Medium',
+          color: COLORS.white,
+          fontSize: 16,
+        }}>
+        {title}
+      </Text>
+    </View>
+  );
+};
 
 const HomeScreen = () => {
-  const {id, categories_name} = categories;
-
-  const renderDataStatistic = ({icon, total, title}) => {
-    return (
-      <View style={{alignItems: 'center'}}>
-        {icon}
-        <Space height={4} />
-        <Text
-          style={{
-            fontFamily: 'Poppins-Bold',
-            color: COLORS.primary2,
-            fontSize: 12,
-          }}>
-          {total}
-        </Text>
-        <Text
-          style={{
-            fontFamily: 'Poppins-Regular',
-            color: COLORS.primary2,
-            fontSize: 12,
-            marginTop: -6,
-          }}>
-          {title}
-        </Text>
-      </View>
-    );
-  };
-
-  const renderMenuCategories = ({icon, title}) => {
-    return (
-      <View style={{alignItems: 'center'}}>
-        <View
-          style={{
-            borderColor: COLORS.gray,
-            borderWidth: 1.5,
-            borderRadius: 8,
-            width: 72,
-            paddingVertical: 8,
-            alignItems: 'center',
-            marginBottom: 8,
-          }}>
-          {icon}
-        </View>
-        <Text
-          style={{
-            fontFamily: 'Poppins-Medium',
-            color: COLORS.primary2,
-            fontSize: 12,
-          }}>
-          {title}
-        </Text>
-      </View>
-    );
-  };
-
-  const renderContentBar = ({title}) => {
-    return (
-      <View
-        style={{
-          backgroundColor: COLORS.primary,
-          width: 195,
-          borderTopRightRadius: 8,
-          borderBottomRightRadius: 8,
-          paddingLeft: 24,
-          paddingVertical: 6,
-          marginBottom: 20,
-        }}>
-        <Text
-          style={{
-            fontFamily: 'Poppins-Medium',
-            color: COLORS.white,
-            fontSize: 16,
-          }}>
-          {title}
-        </Text>
-      </View>
-    );
-  };
+  const categoriesData = categories;
+  const statisticData = statistic;
 
   return (
     <View style={styles.page}>
@@ -158,37 +108,30 @@ const HomeScreen = () => {
           flexDirection: 'row',
           justifyContent: 'space-between',
         }}>
-        {renderDataStatistic({
-          icon: <IcTraveler />,
-          total: '80.409',
-          title: 'travelers',
-        })}
-
-        {renderDataStatistic({
-          icon: <IcTreasure />,
-          total: '862',
-          title: 'treasure',
-        })}
-
-        {renderDataStatistic({
-          icon: <IcCities />,
-          total: '1.492',
-          title: 'cities',
+        {statisticData.map((item, index) => {
+          console.log(item.name);
+          return (
+            <DataSection
+              key={index}
+              title={item.name}
+              total={item.count}
+              icon={item.icon}
+            />
+          );
         })}
       </View>
 
       <Space height={24} />
 
       <ScrollView>
-        {renderContentBar({title: 'Categories'})}
-
+        <TitleSectionBar title="Categories" />
         <View
           style={{
             flexDirection: 'row',
             justifyContent: 'space-between',
             marginHorizontal: 24,
           }}>
-          {categories.map((item, index) => {
+          {categoriesData.map((item, index) => {
             console.log(item.category_name);
             return (
               <CategoriesSection
@@ -211,7 +154,7 @@ const HomeScreen = () => {
 
         <Space height={20} />
 
-        {renderContentBar({title: 'Most Picked'})}
+        <TitleSectionBar title="Most Picked" />
 
         <View style={{marginHorizontal: 24}}>
           <VacationCard
