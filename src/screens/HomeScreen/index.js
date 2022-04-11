@@ -15,8 +15,12 @@ import {
   IcTraveler,
   IcTreasure,
 } from '../../assets';
+import {categories} from '../../data/Category';
+import CategoriesSection from './components/CategoriesSection';
 
 const HomeScreen = () => {
+  const {id, categories_name} = categories;
+
   const renderDataStatistic = ({icon, total, title}) => {
     return (
       <View style={{alignItems: 'center'}}>
@@ -184,9 +188,16 @@ const HomeScreen = () => {
             justifyContent: 'space-between',
             marginHorizontal: 24,
           }}>
-          {renderMenuCategories({icon: <IcHotel />, title: 'Hotel'})}
-          {renderMenuCategories({icon: <IcApartment />, title: 'Apartment'})}
-          {renderMenuCategories({icon: <IcHouse />, title: 'House'})}
+          {categories.map((item, index) => {
+            console.log(item.category_name);
+            return (
+              <CategoriesSection
+                key={index}
+                title={item.category_name}
+                icon={item.icon}
+              />
+            );
+          })}
         </View>
 
         <View

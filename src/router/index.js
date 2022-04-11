@@ -3,9 +3,11 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
+  ApartmentScreen,
   ForgotPassword,
   ForgotPasswordScreen,
   HomeScreen,
+  HotelScreen,
   ProfileScreen,
   SavedScreen,
   SignInScreen,
@@ -53,7 +55,7 @@ const MainApp = () => {
 const Router = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen
+      {/* <Stack.Screen
         name="SplashScreen"
         component={SpalshScreen}
         options={{headerShown: false}}
@@ -95,15 +97,27 @@ const Router = () => {
       />
 
       <Stack.Screen
-        name="MainApp"
-        component={MainApp}
+        name="HotelScreen"
+        component={HotelScreen}
         options={{
           headerShown: false,
-          contentStyle: {backgroundColor: COLORS.white},
         }}
       />
 
+      <Stack.Screen
+        name="ApartmentScreen"
+        component={ApartmentScreen}
+        options={{
+          headerShown: false,
+        }}
+      /> */}
+
       {/* Screen yang di jalankan */}
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{headerShown: false}}
+      />
     </Stack.Navigator>
   );
 };
