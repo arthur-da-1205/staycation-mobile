@@ -37,7 +37,7 @@ export const dummyData = [
     location: 'Malang',
     price_per_night: 1000000,
     facilities: ['Wifi', 'Kitchen Set', 'Private Pool', 'Mineral Water'],
-    type: 'VILLA',
+    type: 'HOUSE',
   },
   {
     id: 6,
