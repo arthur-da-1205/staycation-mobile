@@ -5,6 +5,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
   ApartmentScreen,
   ForgotPassword,
+  ForgotPasswordScreen,
   HomeScreen,
   HotelScreen,
   ProfileScreen,
@@ -54,7 +55,7 @@ const MainApp = () => {
 const Router = () => {
   return (
     <Stack.Navigator>
-      {/* <Stack.Screen
+      <Stack.Screen
         name="SplashScreen"
         component={SpalshScreen}
         options={{headerShown: false}}
@@ -66,17 +67,17 @@ const Router = () => {
       />
       <Stack.Screen
         name="SignInScreen"
-        component={SignIn}
+        component={SignInScreen}
         options={{headerShown: false}}
       />
       <Stack.Screen
         name="SignUpScreen"
-        component={SignUp}
+        component={SignUpScreen}
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="ForgotPassword"
-        component={ForgotPassword}
+        name="ForgotPasswordScreen"
+        component={ForgotPasswordScreen}
         options={{headerShown: false}}
       />
       <Stack.Screen
@@ -94,30 +95,24 @@ const Router = () => {
         component={WelcomeScreenThree}
         options={{headerShown: false}}
       />
-      
+      <Stack.Screen
+        name="MainApp"
+        component={MainApp}
+        options={{headerShown: false}}
+      />
       <Stack.Screen
         name="HotelScreen"
         component={HotelScreen}
         options={{
-          headerShown: false
+          headerShown: false,
         }}
       />
-
       <Stack.Screen
         name="ApartmentScreen"
         component={ApartmentScreen}
         options={{
-          headerShown: false
+          headerShown: false,
         }}
-      />
-
-       */}
-
-      {/* Screen yang di jalankan */}
-      <Stack.Screen
-        name="HotelScreen"
-        component={HotelScreen}
-        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );

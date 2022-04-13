@@ -36,7 +36,7 @@ const StartScreen = ({navigation}) => {
           labelBtn="Log in"
           btnHeight={14}
           fontSize={16}
-          //   onPress={() => navigation.navigate('LoginScreen')}
+          onPress={() => navigation.navigate('SignInScreen')}
         />
         <Space height={20} />
         <Button
@@ -46,6 +46,7 @@ const StartScreen = ({navigation}) => {
           btnHeight={14}
           borderBtn={1}
           borderColor={COLORS.primary2}
+          onPress={() => navigation.navigate('SignUpScreen')}
         />
       </View>
     </View>
