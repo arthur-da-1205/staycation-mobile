@@ -10,19 +10,7 @@ import React from 'react';
 import {DummyDetailScreen, IcFavourite, IcStar, OnBack} from '../../assets';
 import {COLORS} from '../../constants';
 import {Space} from '../../components';
-
-const Line = () => {
-  return (
-    <View
-      style={{
-        backgroundColor: COLORS.gray,
-        height: 1,
-        marginHorizontal: 24,
-        marginTop: 20,
-      }}
-    />
-  );
-};
+import Divider from '../../components/molecules/Divider';
 
 const DetailScreen = () => {
   return (
@@ -179,7 +167,7 @@ const DetailScreen = () => {
         </View>
       </View>
 
-      <Line />
+      <Divider marginTop={20} marginBottom={20} />
     </View>
   );
 };
