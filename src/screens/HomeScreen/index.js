@@ -11,29 +11,13 @@ import HeaderSection from './components/HeaderSection';
 
 const TitleSectionBar = ({title}) => {
   return (
-    <View
-      style={{
-        backgroundColor: COLORS.primary,
-        width: 195,
-        borderTopRightRadius: 8,
-        borderBottomRightRadius: 8,
-        paddingLeft: 24,
-        paddingVertical: 6,
-        marginBottom: 20,
-      }}>
-      <Text
-        style={{
-          fontFamily: 'Poppins-Medium',
-          color: COLORS.white,
-          fontSize: 16,
-        }}>
-        {title}
-      </Text>
+    <View style={styles.titleBarContainer}>
+      <Text style={styles.titleBar}>{title}</Text>
     </View>
   );
 };
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   const categoriesData = categories;
   const statisticData = statistic;
   // const dummyData = dummyData;
@@ -70,17 +54,22 @@ const HomeScreen = () => {
           );
         })}
       </View>
-      <Space height={18} />
+      <Space height={16} />
       {/* <ScrollView> */}
       <TitleSectionBar title="Categories" />
       <View style={styles.categoriesContainer}>
         {categoriesData.map((item, index) => {
-          console.log(item.category_name);
+          // console.log(item.category_name);
           return (
             <CategoriesSection
               key={index}
               title={item.category_name}
               icon={item.icon}
+              onSelect={() => {
+                navigation.navigate('CategoryScreen', {
+                  category_name: item.category_name,
+                });
+              }}
             />
           );
         })}
@@ -123,5 +112,19 @@ const styles = StyleSheet.create({
     marginHorizontal: 24,
     marginTop: 10,
   },
-  mostPickContainer: {marginHorizontal: 24},
+  mostPickContainer: {marginHorizontal: 24, paddingBottom: 14},
+  titleBarContainer: {
+    backgroundColor: COLORS.primary,
+    width: 195,
+    borderTopRightRadius: 8,
+    borderBottomRightRadius: 8,
+    paddingLeft: 24,
+    paddingVertical: 6,
+    marginBottom: 20,
+  },
+  titleBar: {
+    fontFamily: 'Poppins-Medium',
+    color: COLORS.white,
+    fontSize: 16,
+  },
 });

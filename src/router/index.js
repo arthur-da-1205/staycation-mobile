@@ -3,11 +3,10 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
-  ApartmentScreen,
+  CategoryScreen,
   ForgotPassword,
   ForgotPasswordScreen,
   HomeScreen,
-  HotelScreen,
   ProfileScreen,
   SavedScreen,
   SignInScreen,
@@ -20,7 +19,6 @@ import {
   WelcomeScreenTwo,
 } from '../screens';
 import {BottomNavigator} from '../components';
-import {COLORS} from '../constants';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -101,15 +99,8 @@ const Router = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="HotelScreen"
-        component={HotelScreen}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="ApartmentScreen"
-        component={ApartmentScreen}
+        name="CategoryScreen"
+        component={CategoryScreen}
         options={{
           headerShown: false,
         }}

@@ -1,13 +1,13 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {COLORS} from '../../../constants';
 
-const CategoriesSection = ({icon, title}) => {
+const CategoriesSection = ({icon, title, onSelect}) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onSelect}>
       <View style={styles.iconContainer}>{icon}</View>
       <Text style={styles.titleStyle}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
