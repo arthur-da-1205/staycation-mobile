@@ -2,17 +2,12 @@ import {StyleSheet, Text, View, ScrollView, FlatList} from 'react-native';
 import React from 'react';
 import {COLORS} from '../../constants';
 import {Space, VacationCard} from '../../components';
-import {
-  DummyHomeScreen1,
-  DummyHomeScreen2,
-  DummyHomeScreen3,
-  DummyHomeScreen4,
-} from '../../assets';
 import {categories} from '../../data/Category';
 import CategoriesSection from './components/CategoriesSection';
 import {statistic} from '../../data/Statistic';
 import DataSection from './components/DataSection';
 import {dummyData} from '../../data/Dummy';
+import HeaderSection from './components/HeaderSection';
 
 const TitleSectionBar = ({title}) => {
   return (
@@ -60,58 +55,8 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.page}>
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          marginTop: 16,
-          marginHorizontal: 24,
-        }}>
-        <View style={{flex: 1.2}}>
-          <Text
-            style={{
-              fontFamily: 'Poppins-Medium',
-              color: COLORS.primary,
-              fontSize: 22,
-            }}>
-            Stay
-            <Text style={{color: COLORS.primary2}}>cation.</Text>
-          </Text>
-          <Text style={{fontFamily: 'Poppins-Regular', color: COLORS.gray}}>
-            Let’s find best place
-          </Text>
-        </View>
-        <View
-          style={{
-            backgroundColor: COLORS.lightGray,
-            flex: 1,
-            borderTopLeftRadius: 24,
-            borderBottomLeftRadius: 8,
-            alignItems: 'flex-end',
-            justifyContent: 'center',
-            paddingRight: 8,
-          }}>
-          <Text
-            style={{
-              fontFamily: 'Poppins-Regular',
-              color: COLORS.primary2,
-              fontSize: 12,
-            }}>
-            Welcome
-          </Text>
-          <Text
-            style={{
-              fontFamily: 'Poppins-Medium',
-              color: COLORS.primary2,
-              fontSize: 18,
-            }}>
-            John Doe
-          </Text>
-        </View>
-      </View>
-
+      <HeaderSection />
       <Space height={24} />
-
       <View style={styles.statisticContainer}>
         {statisticData.map((item, index) => {
           console.log(item.name);
@@ -125,9 +70,7 @@ const HomeScreen = () => {
           );
         })}
       </View>
-
       <Space height={20} />
-
       {/* <ScrollView> */}
       <TitleSectionBar title="Categories" />
       <View style={styles.categoriesContainer}>
@@ -142,7 +85,6 @@ const HomeScreen = () => {
           );
         })}
       </View>
-
       <View style={styles.line} />
       <Space height={16} />
       {/* </ScrollView> */}
