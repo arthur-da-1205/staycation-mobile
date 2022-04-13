@@ -10,6 +10,7 @@ import IcHotel from './ic_hotel.svg';
 import IcApartment from './ic_apartment.svg';
 import IcHouse from './ic_house.svg';
 import IcStar from './ic_star.svg';
+import IcFavourite from './ic_favourite.svg';
 
 export {
   OnBack,
@@ -24,4 +25,5 @@ export {
   IcApartment,
   IcHouse,
   IcStar,
+  IcFavourite,
 };

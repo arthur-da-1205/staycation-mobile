@@ -9,6 +9,7 @@ import DummyHomeScreen4 from './DummyHomeScreen4.png';
 import DummyHotelScreen from './DummyHotelScreen.png';
 import DummyApartmentScreen from './DummyApartmentScreen.png';
 import DummyHouseScreen from './DummyHouseScreen.png';
+import DummyDetailScreen from './DummyDetailScreen.png';
 
 export {
   DummyWS1,
@@ -22,4 +23,5 @@ export {
   DummyHotelScreen,
   DummyApartmentScreen,
   DummyHouseScreen,
+  DummyDetailScreen,
 };

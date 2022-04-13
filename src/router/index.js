@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
   ApartmentScreen,
+  DetailScreen,
   ForgotPassword,
   ForgotPasswordScreen,
   HomeScreen,
@@ -55,7 +56,7 @@ const MainApp = () => {
 const Router = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen
+      {/* <Stack.Screen
         name="SplashScreen"
         component={SpalshScreen}
         options={{headerShown: false}}
@@ -98,7 +99,10 @@ const Router = () => {
       <Stack.Screen
         name="MainApp"
         component={MainApp}
-        options={{headerShown: false}}
+        options={{
+          headerShown: false,
+          contentStyle: {backgroundColor: COLORS.white},
+        }}
       />
       <Stack.Screen
         name="HotelScreen"
@@ -110,6 +114,14 @@ const Router = () => {
       <Stack.Screen
         name="ApartmentScreen"
         component={ApartmentScreen}
+        options={{
+          headerShown: false,
+        }}
+      /> */}
+
+      <Stack.Screen
+        name="DetailScreen"
+        component={DetailScreen}
         options={{
           headerShown: false,
         }}
