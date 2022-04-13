@@ -46,6 +46,7 @@ const StartScreen = ({navigation}) => {
           btnHeight={14}
           borderBtn={1}
           borderColor={COLORS.primary2}
+          onPress={() => navigation.navigate('SignUpScreen')}
         />
       </View>
     </View>

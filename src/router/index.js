@@ -55,7 +55,7 @@ const MainApp = () => {
 const Router = () => {
   return (
     <Stack.Navigator>
-      {/* <Stack.Screen
+      <Stack.Screen
         name="SplashScreen"
         component={SpalshScreen}
         options={{headerShown: false}}
@@ -95,7 +95,11 @@ const Router = () => {
         component={WelcomeScreenThree}
         options={{headerShown: false}}
       />
-
+      <Stack.Screen
+        name="MainApp"
+        component={MainApp}
+        options={{headerShown: false}}
+      />
       <Stack.Screen
         name="HotelScreen"
         component={HotelScreen}
@@ -103,20 +107,12 @@ const Router = () => {
           headerShown: false,
         }}
       />
-
       <Stack.Screen
         name="ApartmentScreen"
         component={ApartmentScreen}
         options={{
           headerShown: false,
         }}
-      /> */}
-
-      {/* Screen yang di jalankan */}
-      <Stack.Screen
-        name="HomeScreen"
-        component={HomeScreen}
-        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );

@@ -70,7 +70,7 @@ const HomeScreen = () => {
           );
         })}
       </View>
-      <Space height={20} />
+      <Space height={18} />
       {/* <ScrollView> */}
       <TitleSectionBar title="Categories" />
       <View style={styles.categoriesContainer}>
