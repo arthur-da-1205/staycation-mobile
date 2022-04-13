@@ -1,10 +1,16 @@
 import {View, Text} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {StaycationSplash} from '../../assets';
 import {COLORS} from '../../constants';
 import {Space} from '../../components';
 
-const SpalshScreen = () => {
+const SpalshScreen = ({navigation}) => {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.reset({index: 0, routes: [{name: 'StartScreen'}]});
+    }, 2000);
+  }, [navigation]);
+
   return (
     <View
       style={{

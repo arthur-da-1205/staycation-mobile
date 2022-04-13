@@ -1,9 +1,15 @@
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import {Button, Header, InputField, Space} from '../../components';
 import {COLORS} from '../../constants';
 
-const SignUpScreen = () => {
+const SignUpScreen = ({navigation}) => {
   return (
     <View style={styles.page}>
       <Header title={'Create account'} />
@@ -28,7 +34,12 @@ const SignUpScreen = () => {
           <Space height={20} />
           <View style={styles.textContent}>
             <Text style={styles.text1}>Already have an account?</Text>
-            <Text style={styles.text2}>Login</Text>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('SignInScreen');
+              }}>
+              <Text style={styles.text1}>Login</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
