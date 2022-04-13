@@ -11,15 +11,15 @@ import IcApartment from './ic_apartment.svg';
 import IcHouse from './ic_house.svg';
 import IcStar from './ic_star.svg';
 import IcFavourite from './ic_favourite.svg';
-import IcAc from './ic_ac.svg';
-import IcBathroom from './ic_bathroom.svg';
+import IcAc from './ic_ac.png';
+import IcBathroom from './ic_bathroom.png';
 import IcCalendar from './ic_calendar.svg';
-import IcDiningRoom from './ic_diningroom.svg';
-import IcKulkas from './ic_kulkas.svg';
-import IcLivingRoom from './ic_livingroom.svg';
-import IcTv from './ic_tv.svg';
-import IcWifi from './ic_wifi.svg';
-import IcBedroom from './ic_bedroom.svg';
+import IcDiningRoom from './ic_diningroom.png';
+import IcKulkas from './ic_kulkas.png';
+import IcLivingRoom from './ic_livingroom.png';
+import IcTv from './ic_tv.png';
+import IcWifi from './ic_wifi.png';
+import IcBedroom from './ic_bedroom.png';
 
 export {
   OnBack,

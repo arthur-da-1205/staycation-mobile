@@ -7,7 +7,14 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React from 'react';
-import {DummyDetailScreen, IcFavourite, IcStar, OnBack} from '../../assets';
+import {
+  DummyDetailScreen,
+  IcBedroom,
+  IcCalendar,
+  IcFavourite,
+  IcStar,
+  OnBack,
+} from '../../assets';
 import {COLORS} from '../../constants';
 import {Space} from '../../components';
 import Divider from '../../components/molecules/Divider';
@@ -168,6 +175,43 @@ const DetailScreen = () => {
       </View>
 
       <Divider marginTop={20} marginBottom={20} />
+
+      <View style={{paddingHorizontal: 24, flexDirection: 'row'}}>
+        <View
+          style={{
+            backgroundColor: COLORS.primary2,
+            padding: 8,
+            borderRadius: 4,
+          }}>
+          <IcCalendar />
+        </View>
+        <View
+          style={{
+            backgroundColor: COLORS.lightGray,
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderTopRightRadius: 4,
+            borderBottomRightRadius: 4,
+          }}>
+          <Text
+            style={{
+              fontFamily: 'Poppins-Regular',
+              color: COLORS.primary2,
+              fontSize: 16,
+            }}>
+            20 Jan - 22 Jan
+          </Text>
+        </View>
+      </View>
+
+      <Divider marginBottom={20} marginTop={20} />
+
+      <View>
+        <View>
+          <IcBedroom />
+        </View>
+      </View>
     </View>
   );
 };
