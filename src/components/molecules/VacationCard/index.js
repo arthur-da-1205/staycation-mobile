@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
 
 VacationCard.propTypes = {
   dummyImg: PropTypes.any.isRequired,
-  price: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
   titleName: PropTypes.string.isRequired,
   type: PropTypes.string,
   subtitle: PropTypes.string,

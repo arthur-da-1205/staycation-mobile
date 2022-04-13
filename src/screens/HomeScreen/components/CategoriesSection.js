@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     width: 72,
     paddingVertical: 8,
     alignItems: 'center',
-    marginBottom: 8,
+    marginBottom: 6,
   },
   titleStyle: {
     fontFamily: 'Poppins-Medium',

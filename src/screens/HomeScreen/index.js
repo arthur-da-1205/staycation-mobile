@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, ScrollView, FlatList} from 'react-native';
 import React from 'react';
 import {COLORS} from '../../constants';
 import {Space, VacationCard} from '../../components';
@@ -7,18 +7,12 @@ import {
   DummyHomeScreen2,
   DummyHomeScreen3,
   DummyHomeScreen4,
-  DummyWS1,
-  IcApartment,
-  IcCities,
-  IcHotel,
-  IcHouse,
-  IcTraveler,
-  IcTreasure,
 } from '../../assets';
 import {categories} from '../../data/Category';
 import CategoriesSection from './components/CategoriesSection';
 import {statistic} from '../../data/Statistic';
 import DataSection from './components/DataSection';
+import {dummyData} from '../../data/Dummy';
 
 const TitleSectionBar = ({title}) => {
   return (
@@ -47,6 +41,22 @@ const TitleSectionBar = ({title}) => {
 const HomeScreen = () => {
   const categoriesData = categories;
   const statisticData = statistic;
+  // const dummyData = dummyData;
+
+  const renderMostPicked = itemData => {
+    const data = itemData.item;
+    console.log(data);
+    return (
+      <VacationCard
+        bigImgType
+        titleName={data.name}
+        subtitle={data.description}
+        price={data.price_per_night}
+        dummyImg={data.img}
+        type="big-card"
+      />
+    );
+  };
 
   return (
     <View style={styles.page}>
@@ -102,12 +112,7 @@ const HomeScreen = () => {
 
       <Space height={24} />
 
-      <View
-        style={{
-          marginHorizontal: 60,
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-        }}>
+      <View style={styles.statisticContainer}>
         {statisticData.map((item, index) => {
           console.log(item.name);
           return (
@@ -121,79 +126,34 @@ const HomeScreen = () => {
         })}
       </View>
 
-      <Space height={24} />
+      <Space height={20} />
 
-      <ScrollView>
-        <TitleSectionBar title="Categories" />
-        <View
-          style={{
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            marginHorizontal: 24,
-          }}>
-          {categoriesData.map((item, index) => {
-            console.log(item.category_name);
-            return (
-              <CategoriesSection
-                key={index}
-                title={item.category_name}
-                icon={item.icon}
-              />
-            );
-          })}
-        </View>
+      {/* <ScrollView> */}
+      <TitleSectionBar title="Categories" />
+      <View style={styles.categoriesContainer}>
+        {categoriesData.map((item, index) => {
+          console.log(item.category_name);
+          return (
+            <CategoriesSection
+              key={index}
+              title={item.category_name}
+              icon={item.icon}
+            />
+          );
+        })}
+      </View>
 
-        <View
-          style={{
-            backgroundColor: COLORS.gray,
-            height: 1.5,
-            marginHorizontal: 24,
-            marginTop: 16,
-          }}
+      <View style={styles.line} />
+      <Space height={16} />
+      {/* </ScrollView> */}
+      <TitleSectionBar title="Most Picked" />
+      <View style={styles.mostPickContainer}>
+        <FlatList
+          keyExtractor={(item, index) => item.id}
+          data={dummyData}
+          renderItem={renderMostPicked}
         />
-
-        <Space height={20} />
-
-        <TitleSectionBar title="Most Picked" />
-
-        <View style={{marginHorizontal: 24}}>
-          <VacationCard
-            dummyImg={DummyHomeScreen1}
-            price="1.200.500"
-            titleName="Red Line"
-            type="big-card"
-            bigImgType
-            subtitle="Gorosei and Ternyubito"
-          />
-
-          <VacationCard
-            dummyImg={DummyHomeScreen2}
-            price="1.200.500"
-            titleName="Red Line"
-            type="big-card"
-            bigImgType
-            subtitle="Gorosei and Ternyubito"
-          />
-
-          <VacationCard
-            dummyImg={DummyHomeScreen3}
-            price="1.200.500"
-            titleName="Red Line"
-            type="big-card"
-            bigImgType
-            subtitle="Gorosei and Ternyubito"
-          />
-
-          <VacationCard
-            dummyImg={DummyHomeScreen4}
-            price="1.200.500"
-            titleName="Red Line"
-            type="big-card"
-            bigImgType
-            subtitle="Gorosei and Ternyubito"
-          />
-        </View>
-      </ScrollView>
+      </View>
     </View>
   );
 };
@@ -205,4 +165,21 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.white,
   },
+  statisticContainer: {
+    marginHorizontal: 60,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  categoriesContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginHorizontal: 24,
+  },
+  line: {
+    backgroundColor: COLORS.gray,
+    height: 1.5,
+    marginHorizontal: 24,
+    marginTop: 10,
+  },
+  mostPickContainer: {marginHorizontal: 24},
 });
