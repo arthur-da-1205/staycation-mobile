@@ -10,6 +10,11 @@ import DummyHotelScreen from './DummyHotelScreen.png';
 import DummyApartmentScreen from './DummyApartmentScreen.png';
 import DummyHouseScreen from './DummyHouseScreen.png';
 import DummyDetailScreen from './DummyDetailScreen.png';
+import DummyGallery1 from './DummyGallery1.png';
+import DummyGallery2 from './DummyGallery2.png';
+import DummyGallery3 from './DummyGallery3.png';
+import DummyGallery4 from './DummyGallery4.png';
+import DummyGallery5 from './DummyGallery5.png';
 
 export {
   DummyWS1,
@@ -24,4 +29,9 @@ export {
   DummyApartmentScreen,
   DummyHouseScreen,
   DummyDetailScreen,
+  DummyGallery1,
+  DummyGallery2,
+  DummyGallery3,
+  DummyGallery4,
+  DummyGallery5,
 };

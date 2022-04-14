@@ -10,6 +10,11 @@ import {
 import React from 'react';
 import {
   DummyDetailScreen,
+  DummyGallery1,
+  DummyGallery2,
+  DummyGallery3,
+  DummyGallery4,
+  DummyGallery5,
   IcAc,
   IcBathroom,
   IcBedroom,
@@ -47,6 +52,21 @@ const Features = ({iconFeatures, value, featureName}) => {
         </Text>
       </Text>
     </View>
+  );
+};
+
+const ImageGallery = ({image}) => {
+  const height = DIMENSIONS.widthScreen / 3.7;
+  return (
+    <Image
+      source={image}
+      style={{
+        height: height,
+        width: height * 1.22,
+        borderRadius: 8,
+        marginHorizontal: 6,
+      }}
+    />
   );
 };
 
@@ -113,7 +133,7 @@ const DetailScreen = () => {
         </View>
       </ImageBackground>
 
-      <View style={{paddingHorizontal: 24}}>
+      <ScrollView style={{paddingHorizontal: 24}}>
         <View
           style={{
             marginTop: 24,
@@ -317,8 +337,49 @@ const DetailScreen = () => {
           </View> */}
         </View>
 
-        <Text>djfdfjkjj jjbbjhb jhh</Text>
-      </View>
+        <View>
+          <Text style={{fontFamily: 'Poppins-Medium', color: COLORS.primary2}}>
+            Overview
+          </Text>
+          <Space height={12} />
+          <Text
+            style={{
+              fontFamily: 'Poppins-Regular',
+              color: COLORS.gray,
+              textAlign: 'justify',
+            }}>
+            Minimal techno is a minimalist subgenre of techno music. It is
+            characterized by a stripped-down aesthetic that exploits the use of
+            repetition and understated development. Minimal techno is thought to
+            have been originally developed in the early 1990s by Detroit-based
+            producers Robert Hood and Daniel Bell.
+          </Text>
+          <Space height={12} />
+          <Text style={{fontFamily: 'Poppins-Medium', color: COLORS.primary2}}>
+            Gallery
+          </Text>
+          <Space height={12} />
+
+          <ScrollView horizontal>
+            <View style={{flexDirection: 'row', marginHorizontal: -6}}>
+              <ImageGallery image={DummyGallery1} />
+              <ImageGallery image={DummyGallery2} />
+              <ImageGallery image={DummyGallery3} />
+              <ImageGallery image={DummyGallery4} />
+              <ImageGallery image={DummyGallery5} />
+            </View>
+          </ScrollView>
+
+          <Space height={24} />
+          <View>
+            <View>
+              <Text>You will pay :</Text>
+              <Text>14.200.000 IDR /</Text>
+              <Text>2 nights</Text>
+            </View>
+          </View>
+        </View>
+      </ScrollView>
     </View>
   );
 };
