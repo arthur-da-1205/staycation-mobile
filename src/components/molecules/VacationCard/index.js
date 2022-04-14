@@ -1,4 +1,11 @@
-import {StyleSheet, Text, View, ImageBackground, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ImageBackground,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import {COLORS, DIMENSIONS} from '../../../constants';
 import PropTypes from 'prop-types';
@@ -17,27 +24,29 @@ const VacationCard = ({
       case 'big-card':
         return (
           <>
-            <ImageBackground
-              source={dummyImg}
-              style={styles.bigImg}
-              imageStyle={{borderRadius: 15}}>
-              <View style={styles.containerFrame}>
-                <View style={styles.frame}>
-                  <Text style={styles.textPrice}>{price} IDR</Text>
+            <TouchableOpacity activeOpacity={0.7}>
+              <ImageBackground
+                source={dummyImg}
+                style={styles.bigImg}
+                imageStyle={{borderRadius: 15}}>
+                <View style={styles.containerFrame}>
+                  <View style={styles.frame}>
+                    <Text style={styles.textPrice}>{price} IDR</Text>
+                  </View>
                 </View>
-              </View>
 
-              <View style={styles.containerText}>
-                {bigImgType ? (
-                  <>
+                <View style={styles.containerText}>
+                  {bigImgType ? (
+                    <>
+                      <Text style={styles.titleBigImg}>{titleName}</Text>
+                      <Text style={styles.subtitle}>{subtitle}</Text>
+                    </>
+                  ) : (
                     <Text style={styles.titleBigImg}>{titleName}</Text>
-                    <Text style={styles.subtitle}>{subtitle}</Text>
-                  </>
-                ) : (
-                  <Text style={styles.titleBigImg}>{titleName}</Text>
-                )}
-              </View>
-            </ImageBackground>
+                  )}
+                </View>
+              </ImageBackground>
+            </TouchableOpacity>
 
             <Space height={16} />
           </>
@@ -46,20 +55,22 @@ const VacationCard = ({
       case 'small-card':
         return (
           <>
-            <ImageBackground
-              source={dummyImg}
-              style={styles.smallImg}
-              imageStyle={{borderRadius: 15}}>
-              <View style={styles.containerFrame}>
-                <View style={styles.frame}>
-                  <Text style={styles.textPrice}>{price} IDR</Text>
+            <TouchableOpacity>
+              <ImageBackground
+                source={dummyImg}
+                style={styles.smallImg}
+                imageStyle={{borderRadius: 15}}>
+                <View style={styles.containerFrame}>
+                  <View style={styles.frame}>
+                    <Text style={styles.textPrice}>{price} IDR</Text>
+                  </View>
                 </View>
-              </View>
 
-              <View style={styles.containerText}>
-                <Text style={styles.titleSmallImg}>{titleName}</Text>
-              </View>
-            </ImageBackground>
+                <View style={styles.containerText}>
+                  <Text style={styles.titleSmallImg}>{titleName}</Text>
+                </View>
+              </ImageBackground>
+            </TouchableOpacity>
             <Space height={16} />
           </>
         );
