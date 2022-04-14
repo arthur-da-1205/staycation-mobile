@@ -23,8 +23,8 @@ import {
   IcWifi,
   OnBack,
 } from '../../assets';
-import {COLORS} from '../../constants';
-import {Space} from '../../components';
+import {COLORS, DIMENSIONS} from '../../constants';
+import {Button, Space} from '../../components';
 import Divider from '../../components/molecules/Divider';
 
 const Features = ({iconFeatures, value, featureName}) => {
@@ -113,167 +113,212 @@ const DetailScreen = () => {
         </View>
       </ImageBackground>
 
-      <View
-        style={{
-          paddingHorizontal: 24,
-          marginTop: 24,
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}>
-        <View>
-          <Text
-            style={{
-              fontFamily: 'Poppins-Bold',
-              color: COLORS.primary2,
-              fontSize: 19,
-              lineHeight: 30,
-            }}>
-            14.200.000 IDR
-          </Text>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <IcStar />
+      <View style={{paddingHorizontal: 24}}>
+        <View
+          style={{
+            marginTop: 24,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}>
+          <View>
             <Text
               style={{
-                fontFamily: 'Poppins-Medium',
-                fontSize: 16,
+                fontFamily: 'Poppins-Bold',
                 color: COLORS.primary2,
-                marginLeft: 4,
-                lineHeight: 20,
-                top: 2,
+                fontSize: 19,
+                lineHeight: 30,
               }}>
-              4.2
+              14.200.000 IDR
             </Text>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <IcStar />
+              <Text
+                style={{
+                  fontFamily: 'Poppins-Medium',
+                  fontSize: 16,
+                  color: COLORS.primary2,
+                  marginLeft: 4,
+                  lineHeight: 20,
+                  top: 2,
+                }}>
+                4.2
+              </Text>
+            </View>
+          </View>
+
+          <View style={{flexDirection: 'row'}}>
+            <View
+              style={{
+                backgroundColor: COLORS.red,
+                height: 32,
+                width: 32,
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: 4,
+              }}>
+              <Text
+                style={{
+                  fontFamily: 'Poppins-Bold',
+                  fontSize: 24,
+                  color: COLORS.white,
+                  lineHeight: 33,
+                }}>
+                -
+              </Text>
+            </View>
+
+            <View
+              style={{
+                backgroundColor: COLORS.lightGray,
+                height: 32,
+                width: 84,
+                paddingHorizontal: 6,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Text
+                style={{fontFamily: 'Poppins-Regular', color: COLORS.primary2}}>
+                2 nights
+              </Text>
+            </View>
+
+            <View
+              style={{
+                backgroundColor: COLORS.green,
+                height: 32,
+                width: 32,
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: 4,
+              }}>
+              <Text
+                style={{
+                  fontFamily: 'Poppins-Bold',
+                  fontSize: 24,
+                  color: COLORS.white,
+                  lineHeight: 33,
+                }}>
+                +
+              </Text>
+            </View>
           </View>
         </View>
+
+        <Divider marginTop={20} marginBottom={20} />
 
         <View style={{flexDirection: 'row'}}>
           <View
             style={{
-              backgroundColor: COLORS.red,
-              height: 32,
-              width: 32,
-              justifyContent: 'center',
-              alignItems: 'center',
+              backgroundColor: COLORS.primary2,
+              padding: 8,
               borderRadius: 4,
             }}>
-            <Text
-              style={{
-                fontFamily: 'Poppins-Bold',
-                fontSize: 24,
-                color: COLORS.white,
-                lineHeight: 33,
-              }}>
-              -
-            </Text>
+            <IcCalendar />
           </View>
-
           <View
             style={{
               backgroundColor: COLORS.lightGray,
-              height: 32,
-              width: 84,
-              paddingHorizontal: 6,
+              flex: 1,
               justifyContent: 'center',
               alignItems: 'center',
-            }}>
-            <Text
-              style={{fontFamily: 'Poppins-Regular', color: COLORS.primary2}}>
-              2 nights
-            </Text>
-          </View>
-
-          <View
-            style={{
-              backgroundColor: COLORS.green,
-              height: 32,
-              width: 32,
-              justifyContent: 'center',
-              alignItems: 'center',
-              borderRadius: 4,
+              borderTopRightRadius: 4,
+              borderBottomRightRadius: 4,
             }}>
             <Text
               style={{
-                fontFamily: 'Poppins-Bold',
-                fontSize: 24,
-                color: COLORS.white,
-                lineHeight: 33,
+                fontFamily: 'Poppins-Regular',
+                color: COLORS.primary2,
+                fontSize: 16,
               }}>
-              +
+              20 Jan - 22 Jan
             </Text>
           </View>
         </View>
-      </View>
 
-      <Divider marginTop={20} marginBottom={20} />
+        <Divider marginBottom={20} marginTop={20} />
 
-      <View style={{paddingHorizontal: 24, flexDirection: 'row'}}>
-        <View
-          style={{
-            backgroundColor: COLORS.primary2,
-            padding: 8,
-            borderRadius: 4,
-          }}>
-          <IcCalendar />
+        <View>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginHorizontal: -6,
+              }}>
+              <Features
+                iconFeatures={IcBedroom}
+                value="5"
+                featureName={'bedroom'}
+              />
+              <Features
+                iconFeatures={IcLivingRoom}
+                value="1"
+                featureName={'living room'}
+              />
+              <Features
+                iconFeatures={IcBathroom}
+                value="3"
+                featureName={'bathroom'}
+              />
+              <Features
+                iconFeatures={IcDiningRoom}
+                value="1"
+                featureName={'dining room'}
+              />
+              <Features
+                iconFeatures={IcWifi}
+                value="10"
+                featureName={'mbp/s'}
+              />
+              <Features
+                iconFeatures={IcAc}
+                value="7"
+                featureName={'unit ready'}
+              />
+              <Features
+                iconFeatures={IcKulkas}
+                value="2"
+                featureName={'refigrator'}
+              />
+              <Features
+                iconFeatures={IcTv}
+                value="4"
+                featureName={'television'}
+              />
+            </View>
+          </ScrollView>
         </View>
-        <View
-          style={{
-            backgroundColor: COLORS.lightGray,
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-            borderTopRightRadius: 4,
-            borderBottomRightRadius: 4,
-          }}>
-          <Text
+
+        <View style={{marginTop: 20, marginBottom: 12}}>
+          <Divider marginBottom={20} marginTop={20} />
+          <View
+            style={{marginTop: -35, alignItems: 'flex-end', marginRight: 20}}>
+            <TouchableOpacity
+              activeOpacity={0.5}
+              style={{
+                backgroundColor: COLORS.primary,
+                borderRadius: 8,
+                paddingVertical: 4,
+                width: 130,
+                alignItems: 'center',
+              }}>
+              <Text style={{fontFamily: 'Poppins-Medium', color: COLORS.white}}>
+                See more
+              </Text>
+            </TouchableOpacity>
+          </View>
+          {/* <View
             style={{
-              fontFamily: 'Poppins-Regular',
-              color: COLORS.primary2,
-              fontSize: 16,
+              paddingRight: 20,
+              paddingLeft: 176,
+              marginTop: -36,
             }}>
-            20 Jan - 22 Jan
-          </Text>
+            <Button labelBtn="See more" btnHeight={4} />
+          </View> */}
         </View>
+
+        <Text>djfdfjkjj jjbbjhb jhh</Text>
       </View>
-
-      <Divider marginBottom={20} marginTop={20} />
-
-      <ScrollView horizontal style={{marginHorizontal: 24}}>
-        <View
-          style={{
-            flexDirection: 'row',
-            marginHorizontal: -6,
-          }}>
-          <Features
-            iconFeatures={IcBedroom}
-            value="5"
-            featureName={'bedroom'}
-          />
-          <Features
-            iconFeatures={IcLivingRoom}
-            value="1"
-            featureName={'living room'}
-          />
-          <Features
-            iconFeatures={IcBathroom}
-            value="3"
-            featureName={'bathroom'}
-          />
-          <Features
-            iconFeatures={IcDiningRoom}
-            value="1"
-            featureName={'dining room'}
-          />
-          <Features iconFeatures={IcWifi} value="10" featureName={'mbp/s'} />
-          <Features iconFeatures={IcAc} value="7" featureName={'unit ready'} />
-          <Features
-            iconFeatures={IcKulkas}
-            value="2"
-            featureName={'refigrator'}
-          />
-          <Features iconFeatures={IcTv} value="4" featureName={'television'} />
-        </View>
-      </ScrollView>
     </View>
   );
 };

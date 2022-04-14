@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   divider: (marginBottom, marginTop) => ({
     backgroundColor: COLORS.gray,
     height: 1,
-    marginHorizontal: 24,
+    // marginHorizontal: 24,
     marginTop: marginTop,
     marginBottom: marginBottom,
   }),
