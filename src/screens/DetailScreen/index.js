@@ -56,7 +56,7 @@ const Features = ({iconFeatures, value, featureName}) => {
 };
 
 const ImageGallery = ({image}) => {
-  const height = DIMENSIONS.widthScreen / 3.7;
+  const height = DIMENSIONS.widthScreen / 3.8;
   return (
     <Image
       source={image}
@@ -311,30 +311,16 @@ const DetailScreen = () => {
 
         <View style={{marginTop: 20, marginBottom: 12}}>
           <Divider marginBottom={20} marginTop={20} />
+
           <View
             style={{marginTop: -35, alignItems: 'flex-end', marginRight: 20}}>
-            <TouchableOpacity
-              activeOpacity={0.5}
+            <View
               style={{
-                backgroundColor: COLORS.primary,
-                borderRadius: 8,
-                paddingVertical: 4,
                 width: 130,
-                alignItems: 'center',
               }}>
-              <Text style={{fontFamily: 'Poppins-Medium', color: COLORS.white}}>
-                See more
-              </Text>
-            </TouchableOpacity>
+              <Button labelBtn="See more" btnHeight={4} fontSize={14} />
+            </View>
           </View>
-          {/* <View
-            style={{
-              paddingRight: 20,
-              paddingLeft: 176,
-              marginTop: -36,
-            }}>
-            <Button labelBtn="See more" btnHeight={4} />
-          </View> */}
         </View>
 
         <View>
@@ -360,7 +346,7 @@ const DetailScreen = () => {
           </Text>
           <Space height={12} />
 
-          <ScrollView horizontal>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             <View style={{flexDirection: 'row', marginHorizontal: -6}}>
               <ImageGallery image={DummyGallery1} />
               <ImageGallery image={DummyGallery2} />
@@ -371,13 +357,44 @@ const DetailScreen = () => {
           </ScrollView>
 
           <Space height={24} />
-          <View>
-            <View>
-              <Text>You will pay :</Text>
-              <Text>14.200.000 IDR /</Text>
-              <Text>2 nights</Text>
+
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <View style={{flex: 1}}>
+              <Text
+                style={{
+                  fontFamily: 'Poppins-Regular',
+                  color: COLORS.gray,
+                  fontSize: 13,
+                  lineHeight: 16,
+                }}>
+                You will pay :
+              </Text>
+              <Text
+                style={{
+                  fontFamily: 'Poppins-Bold',
+                  color: COLORS.primary2,
+                  fontSize: 16,
+                  lineHeight: 24,
+                }}>
+                14.200.000 IDR /
+              </Text>
+              <Text
+                style={{
+                  fontFamily: 'Poppins-Regular',
+                  color: COLORS.gray,
+                  fontSize: 13,
+                  lineHeight: 16,
+                }}>
+                2 nights
+              </Text>
+            </View>
+
+            <View style={{width: DIMENSIONS.widthScreen / 2.3}}>
+              <Button labelBtn="Book Now" />
             </View>
           </View>
+
+          <Space height={16} />
         </View>
       </ScrollView>
     </View>
