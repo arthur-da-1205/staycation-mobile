@@ -16,6 +16,7 @@ import HotelScreen from './HotelScreen';
 import ApartmentScreen from './ApartmentScreen';
 import HouseScreen from './HouseScreen';
 import CategoryScreen from './CategoryScreen';
+import DetailScreen from './DetailScreen';
 
 export {
   ForgotPasswordScreen,
@@ -34,4 +35,5 @@ export {
   ApartmentScreen,
   HouseScreen,
   CategoryScreen,
+  DetailScreen,
 };
