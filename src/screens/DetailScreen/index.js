@@ -5,19 +5,50 @@ import {
   ImageBackground,
   Image,
   TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 import React from 'react';
 import {
   DummyDetailScreen,
+  IcAc,
+  IcBathroom,
   IcBedroom,
   IcCalendar,
+  IcDiningRoom,
   IcFavourite,
+  IcKulkas,
+  IcLivingRoom,
   IcStar,
+  IcTv,
+  IcWifi,
   OnBack,
 } from '../../assets';
 import {COLORS} from '../../constants';
 import {Space} from '../../components';
 import Divider from '../../components/molecules/Divider';
+
+const Features = ({iconFeatures, value, featureName}) => {
+  return (
+    <View
+      style={{
+        alignItems: 'center',
+        marginHorizontal: 6,
+      }}>
+      <Image source={iconFeatures} style={{height: 32, width: 32}} />
+      <Text
+        style={{
+          fontFamily: 'Poppins-Medium',
+          color: COLORS.primary2,
+          fontSize: 12,
+        }}>
+        {value}{' '}
+        <Text style={{fontFamily: 'Poppins-Light', color: COLORS.gray}}>
+          {featureName}
+        </Text>
+      </Text>
+    </View>
+  );
+};
 
 const DetailScreen = () => {
   return (
@@ -207,11 +238,42 @@ const DetailScreen = () => {
 
       <Divider marginBottom={20} marginTop={20} />
 
-      <View>
-        <View>
-          <IcBedroom />
+      <ScrollView horizontal style={{marginHorizontal: 24}}>
+        <View
+          style={{
+            flexDirection: 'row',
+            marginHorizontal: -6,
+          }}>
+          <Features
+            iconFeatures={IcBedroom}
+            value="5"
+            featureName={'bedroom'}
+          />
+          <Features
+            iconFeatures={IcLivingRoom}
+            value="1"
+            featureName={'living room'}
+          />
+          <Features
+            iconFeatures={IcBathroom}
+            value="3"
+            featureName={'bathroom'}
+          />
+          <Features
+            iconFeatures={IcDiningRoom}
+            value="1"
+            featureName={'dining room'}
+          />
+          <Features iconFeatures={IcWifi} value="10" featureName={'mbp/s'} />
+          <Features iconFeatures={IcAc} value="7" featureName={'unit ready'} />
+          <Features
+            iconFeatures={IcKulkas}
+            value="2"
+            featureName={'refigrator'}
+          />
+          <Features iconFeatures={IcTv} value="4" featureName={'television'} />
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 };
