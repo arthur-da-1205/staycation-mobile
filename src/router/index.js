@@ -20,6 +20,7 @@ import {
   WelcomeScreenTwo,
 } from '../screens';
 import {BottomNavigator} from '../components';
+import {COLORS} from '../constants';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
