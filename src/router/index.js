@@ -21,6 +21,7 @@ import {
 } from '../screens';
 import {BottomNavigator} from '../components';
 import {COLORS} from '../constants';
+import EditProfileScreen from '../screens/EditProfileScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -110,10 +111,16 @@ const Router = () => {
           headerShown: false,
         }}
       />
-
       <Stack.Screen
         name="DetailScreen"
         component={DetailScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="EditProfileScreen"
+        component={EditProfileScreen}
         options={{
           headerShown: false,
         }}
