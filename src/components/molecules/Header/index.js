@@ -4,14 +4,19 @@ import {COLORS} from '../../../constants';
 import {Space} from '../../atom';
 import {OnBack, EditProfile} from '../../../assets/Icon';
 import PropTypes from 'prop-types';
+import {useNavigation} from '@react-navigation/native';
 
 const Header = ({title, type, noStepper}) => {
+  const navigation = useNavigation();
   const renderContent = () => {
     switch (type) {
       case 'onBack':
         return (
           <>
-            <TouchableOpacity activeOpacity={0.5} style={styles.onBack}>
+            <TouchableOpacity
+              activeOpacity={0.5}
+              style={styles.onBack}
+              onPress={() => navigation.goBack()}>
               <OnBack />
             </TouchableOpacity>
             <Text style={styles.headerTitle}>{title}</Text>
@@ -22,7 +27,10 @@ const Header = ({title, type, noStepper}) => {
         return (
           <>
             <View style={styles.flexEnd}>
-              <TouchableOpacity activeOpacity={0.5} style={styles.editProfile}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.editProfile}
+                onPress={() => navigation.navigate('EditProfileScreen')}>
                 <EditProfile />
               </TouchableOpacity>
             </View>
