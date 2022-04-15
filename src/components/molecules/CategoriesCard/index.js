@@ -10,8 +10,12 @@ const CategoriesCard = ({dummyImg, title}) => {
       <Image source={dummyImg} style={styles.image} />
 
       <View style={styles.containerRight}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.subTitle}>Bogor, Indonesia</Text>
+        <Text style={styles.title} numberOfLines={1}>
+          {title}
+        </Text>
+        <Text style={styles.subTitle} numberOfLines={1}>
+          Bogor, Indonesia
+        </Text>
         <View style={styles.containerRating}>
           <IcStar />
           <Text style={styles.textRating}>4.2</Text>

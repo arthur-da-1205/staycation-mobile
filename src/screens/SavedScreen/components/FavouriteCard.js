@@ -7,8 +7,12 @@ const FavouriteCard = ({image}) => {
   return (
     <View style={styles.container}>
       <Image source={image} style={styles.image(width)} />
-      <Text style={styles.title}>Green Park</Text>
-      <Text style={styles.subTitle}>Bogor, Indonesia</Text>
+      <Text style={styles.title} numberOfLines={1}>
+        Green Park
+      </Text>
+      <Text style={styles.subTitle} numberOfLines={1}>
+        Bogor, Indonesia
+      </Text>
     </View>
   );
 };

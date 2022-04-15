@@ -67,7 +67,9 @@ const VacationCard = ({
                 </View>
 
                 <View style={styles.containerText}>
-                  <Text style={styles.titleSmallImg}>{titleName}</Text>
+                  <Text style={styles.titleSmallImg} numberOfLines={1}>
+                    {titleName}
+                  </Text>
                 </View>
               </ImageBackground>
             </TouchableOpacity>
