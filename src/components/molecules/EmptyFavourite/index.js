@@ -8,8 +8,6 @@ import {COLORS} from '../../../constants';
 const EmptyFavourite = () => {
   return (
     <View>
-      <Header title="Favourites" />
-      <Space height={36} />
       <View style={styles.IlustrationContainer}>
         <IlEmptyFavourite />
       </View>
