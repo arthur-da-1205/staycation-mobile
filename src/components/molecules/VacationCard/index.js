@@ -18,13 +18,14 @@ const VacationCard = ({
   type,
   subtitle,
   bigImgType,
+  OnPress,
 }) => {
   const renderCard = () => {
     switch (type) {
       case 'big-card':
         return (
           <>
-            <TouchableOpacity activeOpacity={0.7}>
+            <TouchableOpacity activeOpacity={0.7} onPress={OnPress}>
               <ImageBackground
                 source={dummyImg}
                 style={styles.bigImg}
@@ -55,7 +56,7 @@ const VacationCard = ({
       case 'small-card':
         return (
           <>
-            <TouchableOpacity>
+            <TouchableOpacity activeOpacity={0.7} onPress={OnPress}>
               <ImageBackground
                 source={dummyImg}
                 style={styles.smallImg}

@@ -22,6 +22,7 @@ import {
 import {BottomNavigator} from '../components';
 import {COLORS} from '../constants';
 import EditProfileScreen from '../screens/EditProfileScreen';
+import {BookingScreen} from '../screens/PaymentScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -121,6 +122,14 @@ const Router = () => {
       <Stack.Screen
         name="EditProfileScreen"
         component={EditProfileScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="BookingScreen"
+        component={BookingScreen}
         options={{
           headerShown: false,
         }}
