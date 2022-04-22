@@ -4,6 +4,7 @@ import {Button, Header, InputField, Space} from '../../../components';
 import {COLORS} from '../../../constants';
 import {IcBankBCA, IcBankMandiri} from '../../../assets';
 import Divider from '../../../components/molecules/Divider';
+import {useNavigation} from '@react-navigation/native';
 
 const ListTransfer = ({image, bankName, noRek, name}) => {
   return (
@@ -43,6 +44,8 @@ const ListTransfer = ({image, bankName, noRek, name}) => {
 };
 
 const TransferBankScreen = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={{flex: 1, backgroundColor: COLORS.white}}>
       <Header title="Payment" type="onback-payment" noStepper="2" />
@@ -85,7 +88,10 @@ const TransferBankScreen = () => {
         <InputField label={'Nama Pengirim'} placeholder="Please type here" />
 
         <View style={{marginVertical: 24}}>
-          <Button labelBtn="Continue to Book" />
+          <Button
+            labelBtn="Continue to Book"
+            onPress={() => navigation.navigate('SuccessBookingScreen')}
+          />
         </View>
       </ScrollView>
     </View>

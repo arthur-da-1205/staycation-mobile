@@ -22,7 +22,11 @@ import {
 import {BottomNavigator} from '../components';
 import {COLORS} from '../constants';
 import EditProfileScreen from '../screens/EditProfileScreen';
-import {BookingScreen, TransferBankScreen} from '../screens/PaymentScreen';
+import {
+  BookingScreen,
+  SuccessBookingScreen,
+  TransferBankScreen,
+} from '../screens/PaymentScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -138,6 +142,14 @@ const Router = () => {
       <Stack.Screen
         name="TransferBankScreen"
         component={TransferBankScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="SuccessBookingScreen"
+        component={SuccessBookingScreen}
         options={{
           headerShown: false,
         }}
