@@ -42,7 +42,10 @@ const Header = ({title, type, noStepper}) => {
         return (
           <>
             <View style={styles.pageOnbackPayment}>
-              <TouchableOpacity activeOpacity={0.5} style={styles.onBack}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.onBack}
+                onPress={() => navigation.goBack()}>
                 <OnBack />
               </TouchableOpacity>
               <View style={styles.borderStepper}>
