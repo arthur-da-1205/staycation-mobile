@@ -18,7 +18,7 @@ const BookingScreen = () => {
         <Text style={styles.textLabel}>Item Booking</Text>
         <View style={styles.itemBookingContent}>
           <Image source={DummyDetailScreen} style={styles.image} />
-          <View style={subItemBookingContent}>
+          <View style={styles.subItemBookingContent}>
             <Text style={styles.textTitle}>Ocean Land</Text>
             <Text style={styles.text}>14.200.000 IDR</Text>
             <Text style={styles.text}>20 Jan - 22 Jan</Text>
