@@ -4,8 +4,11 @@ import {Button, Header, ItemValue, Space} from '../../../components';
 import {DummyDetailScreen} from '../../../assets';
 import Divider from '../../../components/molecules/Divider';
 import {COLORS} from '../../../constants';
+import {useNavigation} from '@react-navigation/native';
 
 const BookingScreen = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={{flex: 1, backgroundColor: COLORS.white}}>
       <Header title="Booking Information" type="onback-payment" noStepper="1" />
@@ -77,7 +80,10 @@ const BookingScreen = () => {
       </View>
 
       <View style={{paddingHorizontal: 24, marginBottom: 24}}>
-        <Button labelBtn="Continue to Book" />
+        <Button
+          labelBtn="Continue to Book"
+          onPress={() => navigation.navigate('TransferBankScreen')}
+        />
       </View>
     </View>
   );
