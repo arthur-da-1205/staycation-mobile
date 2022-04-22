@@ -8,36 +8,12 @@ import {useNavigation} from '@react-navigation/native';
 
 const ListTransfer = ({image, bankName, noRek, name}) => {
   return (
-    <View
-      style={{
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginBottom: 12,
-      }}>
-      <Image source={image} style={{width: 68, height: 40}} />
-      <View style={{alignItems: 'flex-end'}}>
-        <Text
-          style={{
-            fontFamily: 'Poppins-Regular',
-            color: COLORS.primary2,
-          }}>
-          {bankName}
-        </Text>
-        <Text
-          style={{
-            fontFamily: 'Poppins-Regular',
-            color: COLORS.primary2,
-          }}>
-          {noRek}
-        </Text>
-        <Text
-          style={{
-            fontFamily: 'Poppins-Regular',
-            color: COLORS.primary2,
-          }}>
-          {name}
-        </Text>
+    <View style={styles.listTransferContainer}>
+      <Image source={image} style={styles.image} />
+      <View style={styles.textAlign}>
+        <Text style={styles.text}>{bankName}</Text>
+        <Text style={styles.text}>{noRek}</Text>
+        <Text style={styles.text}>{name}</Text>
       </View>
     </View>
   );
@@ -47,21 +23,12 @@ const TransferBankScreen = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={{flex: 1, backgroundColor: COLORS.white}}>
+    <View style={styles.page}>
       <Header title="Payment" type="onback-payment" noStepper="2" />
       <Space height={24} />
-      <ScrollView
-        style={{paddingHorizontal: 24}}
-        showsVerticalScrollIndicator={false}>
-        <Text
-          style={{
-            fontFamily: 'Poppins-Regular',
-            color: COLORS.primary2,
-            marginBottom: 12,
-          }}>
-          Transfer
-        </Text>
 
+      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+        <Text style={styles.textLabel}>Transfer</Text>
         <ListTransfer
           image={IcBankBCA}
           bankName="Bank Central Asia"
@@ -87,7 +54,7 @@ const TransferBankScreen = () => {
         <Space height={20} />
         <InputField label={'Nama Pengirim'} placeholder="Please type here" />
 
-        <View style={{marginVertical: 24}}>
+        <View style={styles.buttonContainer}>
           <Button
             labelBtn="Continue to Book"
             onPress={() => navigation.navigate('SuccessBookingScreen')}
@@ -100,4 +67,25 @@ const TransferBankScreen = () => {
 
 export default TransferBankScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  page: {flex: 1, backgroundColor: COLORS.white},
+  container: {paddingHorizontal: 24},
+  textLabel: {
+    fontFamily: 'Poppins-Regular',
+    color: COLORS.primary2,
+    marginBottom: 12,
+  },
+  listTransferContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  image: {width: 68, height: 40},
+  textAlign: {alignItems: 'flex-end'},
+  text: {
+    fontFamily: 'Poppins-Regular',
+    color: COLORS.primary2,
+  },
+  buttonContainer: {marginVertical: 24},
+});
