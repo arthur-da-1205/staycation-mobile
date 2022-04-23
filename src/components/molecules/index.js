@@ -6,6 +6,8 @@ import EmptyFavourite from './EmptyFavourite';
 import ListProfile from './ListProfile';
 import ItemValue from './ItemValue';
 import EmptyTrips from './EmptyTrips';
+import TripsTabSection from './TripsTabSection';
+import ItemListTrips from './ItemListTrips';
 
 export {
   Header,
@@ -16,4 +18,6 @@ export {
   ListProfile,
   ItemValue,
   EmptyTrips,
+  TripsTabSection,
+  ItemListTrips,
 };
