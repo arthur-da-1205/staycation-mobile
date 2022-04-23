@@ -1,10 +1,12 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
+import {COLORS} from '../../constants';
+import {EmptyTrips} from '../../components';
 
 const TripsScreen = () => {
   return (
-    <View>
-      <Text>TripsScreen</Text>
+    <View style={{flex: 1, backgroundColor: COLORS.white}}>
+      <EmptyTrips />
     </View>
   );
 };
