@@ -3,7 +3,7 @@ import React from 'react';
 import {DummyDetailScreen} from '../../../assets';
 import {COLORS} from '../../../constants';
 
-const ItemListTrips = ({type}) => {
+const ItemListTrips = ({type, onPress}) => {
   const renderContent = () => {
     switch (type) {
       case 'progress':
@@ -34,7 +34,7 @@ const ItemListTrips = ({type}) => {
   };
 
   return (
-    <TouchableOpacity activeOpacity={0.6}>
+    <TouchableOpacity activeOpacity={0.6} onPress={onPress}>
       <View style={styles.container}>
         <Image source={DummyDetailScreen} style={styles.image} />
         {renderContent()}

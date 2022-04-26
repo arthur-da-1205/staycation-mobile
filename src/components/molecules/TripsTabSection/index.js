@@ -4,6 +4,7 @@ import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import {COLORS} from '../../../constants';
 import ItemListTrips from '../ItemListTrips';
 import {Space} from '../../atom';
+import {useNavigation} from '@react-navigation/native';
 
 const renderTabBar = props => (
   <TabBar
@@ -18,10 +19,14 @@ const renderTabBar = props => (
 );
 
 const Progress = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView>
       <Space height={16} />
-      <ItemListTrips type={'progress'} />
+      <ItemListTrips
+        type={'progress'}
+        onPress={() => navigation.navigate('BookingOrderScreen')}
+      />
       <ItemListTrips type={'progress'} />
       <ItemListTrips type={'progress'} />
     </ScrollView>
@@ -29,10 +34,14 @@ const Progress = () => {
 };
 
 const PastTrips = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView>
       <Space height={16} />
-      <ItemListTrips type={'past-trips'} />
+      <ItemListTrips
+        type={'past-trips'}
+        onPress={() => navigation.navigate('BookingOrderScreen')}
+      />
       <ItemListTrips type={'past-trips'} />
     </ScrollView>
   );

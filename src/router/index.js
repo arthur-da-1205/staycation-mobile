@@ -3,6 +3,7 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
+  BookingOrderScreen,
   CategoryScreen,
   DetailScreen,
   ForgotPassword,
@@ -150,6 +151,14 @@ const Router = () => {
       <Stack.Screen
         name="SuccessBookingScreen"
         component={SuccessBookingScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="BookingOrderScreen"
+        component={BookingOrderScreen}
         options={{
           headerShown: false,
         }}
