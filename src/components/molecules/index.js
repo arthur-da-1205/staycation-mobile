@@ -4,6 +4,7 @@ import VacationCard from './VacationCard';
 import CategoriesCard from './CategoriesCard';
 import EmptyFavourite from './EmptyFavourite';
 import ListProfile from './ListProfile';
+import ItemValue from './ItemValue';
 
 export {
   Header,
@@ -12,4 +13,5 @@ export {
   CategoriesCard,
   EmptyFavourite,
   ListProfile,
+  ItemValue,
 };

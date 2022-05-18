@@ -31,6 +31,7 @@ import {
 import {COLORS, DIMENSIONS} from '../../constants';
 import {Button, Space} from '../../components';
 import Divider from '../../components/molecules/Divider';
+import {useNavigation} from '@react-navigation/native';
 
 const Features = ({iconFeatures, value, featureName}) => {
   return (
@@ -49,12 +50,17 @@ const ImageGallery = ({image}) => {
 };
 
 const DetailScreen = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.page}>
       <ImageBackground source={DummyDetailScreen} style={styles.imgHeight}>
         <View style={styles.headerFlex}>
           <View style={styles.headerContainer}>
-            <TouchableOpacity style={styles.onBack} activeOpacity={0.5}>
+            <TouchableOpacity
+              style={styles.onBack}
+              activeOpacity={0.5}
+              onPress={() => navigation.goBack()}>
               <OnBack />
             </TouchableOpacity>
 
@@ -201,7 +207,10 @@ const DetailScreen = () => {
             </View>
 
             <View style={styles.bookButtonWidth}>
-              <Button labelBtn="Book Now" />
+              <Button
+                labelBtn="Book Now"
+                onPress={() => navigation.navigate('BookingScreen')}
+              />
             </View>
           </View>
 

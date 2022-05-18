@@ -20,6 +20,8 @@ import IcLivingRoom from './ic_livingroom.png';
 import IcTv from './ic_tv.png';
 import IcWifi from './ic_wifi.png';
 import IcBedroom from './ic_bedroom.png';
+import IcBankBCA from './ic_bank_bca.png';
+import IcBankMandiri from './ic_bank_mandiri.png';
 
 export {
   OnBack,
@@ -44,4 +46,6 @@ export {
   IcTv,
   IcWifi,
   IcBedroom,
+  IcBankBCA,
+  IcBankMandiri,
 };
