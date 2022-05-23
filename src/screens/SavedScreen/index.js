@@ -22,7 +22,7 @@ const SavedScreen = () => {
           <FavouriteCard image={DummyHouseScreen} />
           <FavouriteCard image={DummyApartmentScreen} />
           <FavouriteCard image={DummyHotelScreen} />
-          <FavouriteCard image={DummyHouseScreen} />
+          {/* <FavouriteCard image={DummyHouseScreen} /> */}
         </View>
       </ScrollView>
     </View>

@@ -1,5 +1,7 @@
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import {COLORS} from '../../../constants';
 
 const CategoriesSection = ({icon, title, onSelect}) => {
@@ -30,3 +32,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
 });
+
+CategoriesSection.propTypes = {
+  title: PropTypes.string.isRequired,
+};
