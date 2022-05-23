@@ -14,6 +14,12 @@ import SavedScreen from './SavedScreen';
 import ProfileScreen from './ProfileScreen';
 import CategoryScreen from './CategoryScreen';
 import DetailScreen from './DetailScreen';
+import {
+  BookingScreen,
+  SuccessBookingScreen,
+  TransferBankScreen,
+} from './PaymentScreen';
+import BookingOrderScreen from './BookingOrderScreen';
 
 export {
   ForgotPasswordScreen,
@@ -30,4 +36,8 @@ export {
   ProfileScreen,
   CategoryScreen,
   DetailScreen,
+  BookingScreen,
+  SuccessBookingScreen,
+  TransferBankScreen,
+  BookingOrderScreen,
 };

@@ -33,7 +33,7 @@ const HomeScreen = ({navigation}) => {
         price={data.price_per_night}
         dummyImg={data.img}
         type="big-card"
-        onPress={() => navigation.navigate('DetailScreen')}
+        OnPress={() => navigation.navigate('DetailScreen')}
       />
     );
   };

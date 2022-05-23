@@ -3,6 +3,7 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
+  BookingOrderScreen,
   CategoryScreen,
   DetailScreen,
   ForgotPassword,
@@ -22,6 +23,11 @@ import {
 import {BottomNavigator} from '../components';
 import {COLORS} from '../constants';
 import EditProfileScreen from '../screens/EditProfileScreen';
+import {
+  BookingScreen,
+  SuccessBookingScreen,
+  TransferBankScreen,
+} from '../screens/PaymentScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -121,6 +127,38 @@ const Router = () => {
       <Stack.Screen
         name="EditProfileScreen"
         component={EditProfileScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="BookingScreen"
+        component={BookingScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="TransferBankScreen"
+        component={TransferBankScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="SuccessBookingScreen"
+        component={SuccessBookingScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="BookingOrderScreen"
+        component={BookingOrderScreen}
         options={{
           headerShown: false,
         }}
