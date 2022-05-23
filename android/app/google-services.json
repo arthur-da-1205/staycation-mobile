@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "957415492304",
-    "project_id": "staycation-mobile-app",
-    "storage_bucket": "staycation-mobile-app.appspot.com"
+    "project_number": "527343611314",
+    "project_id": "staycationapp",
+    "storage_bucket": "staycationapp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:957415492304:android:7f60f767a76c5421852cd5",
+        "mobilesdk_app_id": "1:527343611314:android:a096c6009865287f2388ab",
         "android_client_info": {
-          "package_name": "com.staycationapp"
+          "package_name": "com.staycationmobileapprn"
         }
       },
       "oauth_client": [
         {
-          "client_id": "957415492304-bnntf70lhj7vgjqvbec7o81vb51ifqss.apps.googleusercontent.com",
+          "client_id": "527343611314-lvd6akesq07o4747jfvs3b4a6vde258d.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBkr6VQHf7fbgmuVOcxC3SqlzY7J79EusQ"
+          "current_key": "AIzaSyB25MS828fYuUuNaCp5I2Lqlk_etWF7QPg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "957415492304-bnntf70lhj7vgjqvbec7o81vb51ifqss.apps.googleusercontent.com",
+              "client_id": "527343611314-lvd6akesq07o4747jfvs3b4a6vde258d.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
