@@ -30,6 +30,6 @@ export default ListProfile;
 const styles = StyleSheet.create({});
 
 ListProfile.propTypes = {
-  titleName: PropTypes.string,
+  titleName: PropTypes.string.isRequired,
   valueName: PropTypes.string,
 };
